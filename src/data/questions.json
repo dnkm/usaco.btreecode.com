@@ -1,0 +1,2342 @@
+[
+  {
+    "sub_cat": "silver1",
+    "level": "silver",
+    "difficulty": 11,
+    "site": "usaco",
+    "name": "2020 January Berry Picking"
+  },
+  {
+    "level": "bronze",
+    "name": "2020 December Daisy Chains",
+    "site": "usaco",
+    "difficulty": 4,
+    "sub_cat": "bronze2"
+  },
+  {
+    "site": "usaco",
+    "name": "2016 December Moocast",
+    "difficulty": 17,
+
+    "level": "silver"
+  },
+  {
+    "difficulty": 17,
+    "level": "silver",
+    "site": "usaco",
+    "name": "2021 February Just Green Enough"
+  },
+  {
+    "level": "bronze",
+    "name": "2015 January Cow Routing",
+    "sub_cat": "bronze1",
+    "difficulty": 1
+  },
+  {
+    "site": "usaco",
+    "level": "silver",
+    "name": "2021 Open Acowdemia",
+    "difficulty": 17
+  },
+  {
+    "level": "bronze",
+    "name": "2016 Open Field Reduction",
+    "difficulty": 7,
+    "sub_cat": "bronze3"
+  },
+  {
+    "difficulty": 4,
+    "sub_cat": "bronze2",
+    "site": "usaco",
+    "name": "2019 December Where Am I?"
+  },
+  {
+    "site": "usaco",
+    "level": "bronze",
+    "name": "2020 Open Social Distancing II",
+    "sub_cat": "bronze2"
+  },
+  {
+    "site": "usaco",
+
+    "difficulty": 31,
+    "sub_cat": "platinum1",
+    "level": "platinum"
+  },
+  {
+    "sub_cat": "gold1",
+
+    "difficulty": 21,
+    "site": "usaco",
+    "name": "2021 February Stone Game"
+  },
+  {
+    "name": "2016 February Circular Barn",
+    "sub_cat": "silver1",
+    "level": "silver",
+    "difficulty": 11
+  },
+  {
+    "difficulty": 37,
+    "name": "2016 February Circular Barn",
+    "level": "platinum",
+    "site": "usaco"
+  },
+  {
+    "name": "2019 December Cow Gymnastics",
+    "sub_cat": "bronze1",
+    "site": "usaco",
+    "difficulty": 1,
+    "level": "bronze"
+  },
+  {
+    "difficulty": 4,
+    "sub_cat": "bronze2",
+
+    "level": "bronze",
+    "name": "2017 December The Bovine Shuffle"
+  },
+  {
+    "name": "2014 December Cow Jog",
+    "sub_cat": "gold3",
+
+    "difficulty": 27,
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "silver1",
+    "name": "2021 February Comfortable Cows",
+
+    "site": "usaco",
+    "difficulty": 11
+  },
+  {
+    "level": "bronze",
+    "sub_cat": "bronze3",
+    "site": "usaco",
+    "difficulty": 7,
+    "name": "2021 Open Acowdemia III"
+  },
+  {
+    "difficulty": 17,
+    "level": "silver",
+    "site": "usaco",
+    "name": "2018 Open Multiplayer Moo",
+    "sub_cat": "silver3"
+  },
+  {
+    "difficulty": 27,
+    "site": "usaco",
+    "sub_cat": "gold3",
+
+    "name": "2018 February Taming the Herd"
+  },
+  {
+    "level": "gold",
+
+    "sub_cat": "gold3",
+    "name": "2020 January Springboards",
+    "site": "usaco"
+  },
+  {
+    "site": "SPOJ",
+
+    "link": "https://www.spoj.com/problems/ANARC09A/",
+    "name": "ANARC09A"
+  },
+  {
+    "name": "2019 Open Bucket Brigade",
+    "level": "bronze",
+    "sub_cat": "bronze1",
+    "site": "usaco",
+    "difficulty": 1
+  },
+  {
+    "name": "2015 February Censoring",
+
+    "sub_cat": "bronze1",
+    "site": "usaco",
+    "difficulty": 1
+  },
+  {
+    "name": "2015 January Stampede",
+    "sub_cat": "silver1",
+    "level": "silver",
+
+    "site": "usaco"
+  },
+  {
+    "site": "usaco",
+
+    "sub_cat": "bronze1",
+    "difficulty": 1,
+    "level": "bronze"
+  },
+  {
+    "link": "https://codeforces.com/contest/1398/problem/C",
+    "name": "Good Subarrays",
+    "site": "code forces"
+  },
+  {
+    "site": "Leetcode",
+    "name": "",
+    "link": "https://leetcode.com/problems/minimum-window-substring/"
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "bronze1",
+    "level": "bronze",
+    "difficulty": 1
+  },
+  {
+    "level": "bronze",
+    "difficulty": 7,
+    "name": "2018 February Taming the Herd",
+    "sub_cat": "bronze3",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "silver1",
+    "level": "silver",
+    "name": "2019 January Grass Planting",
+    "difficulty": 11
+  },
+  {
+    "site": "Hackerrank",
+    "name": "Stone Division",
+
+    "link": "https://www.hackerrank.com/challenges/stone-division-2/problem"
+  },
+  {
+    "level": "bronze",
+
+    "difficulty": 1,
+    "sub_cat": "bronze1",
+    "name": "2019 January Shell Game"
+  },
+  {
+    "name": "2017 February Why Did the Cow Cross the Road",
+    "level": "silver",
+    "site": "usaco",
+    "difficulty": 11,
+    "sub_cat": "silver1"
+  },
+  {
+    "site": "usaco",
+    "difficulty": 34,
+    "level": "platinum",
+
+    "name": "2021 January Minimum Cost Paths"
+  },
+  {
+    "name": "2020 Open Social Distancing",
+    "sub_cat": "silver1",
+    "site": "usaco",
+
+    "level": "silver"
+  },
+  {
+    "site": "code forces",
+    "link": "https://codeforces.com/problemset/problem/1343/C",
+
+    "name": "alternating subsequence"
+  },
+  {
+    "site": "usaco",
+
+    "name": "2016 February Milk Pails",
+    "sub_cat": "silver3",
+    "difficulty": 17
+  },
+  {
+    "link": "https://www.spoj.com/problems/CRAN04/",
+
+    "site": "SPOJ",
+    "name": "CRANS04"
+  },
+  {
+    "name": "2018 January Rental Service",
+    "level": "silver",
+
+    "site": "usaco",
+    "difficulty": 14
+  },
+  {
+    "name": "2021 January Spaced Out",
+    "sub_cat": "silver3",
+
+    "site": "usaco",
+    "level": "silver"
+  },
+  {
+    "name": "2019 December Moortal Cowmbat",
+    "site": "usaco",
+    "level": "gold",
+    "sub_cat": "gold3"
+  },
+  {
+    "difficulty": 1,
+    "site": "usaco",
+    "level": "bronze",
+    "name": "2020 January Word Processor"
+  },
+  {
+    "level": "silver",
+    "name": "2015 January Meeting Time",
+    "site": "usaco",
+    "sub_cat": "silver3"
+  },
+  {
+    "level": "silver",
+    "name": "2016 Open Field Reduction",
+    "site": "usaco",
+
+    "difficulty": 11
+  },
+  {
+    "difficulty": 17,
+    "site": "usaco",
+    "level": "silver",
+    "sub_cat": "silver3"
+  },
+  {
+    "name": "2021 Open United Cows of Farmer John",
+    "sub_cat": "platinum1",
+    "site": "usaco",
+    "level": "platinum",
+    "difficulty": 31
+  },
+  {
+    "sub_cat": "bronze2",
+    "difficulty": 4,
+    "site": "usaco",
+    "name": "2019 January Sleepy Cow Sorting"
+  },
+  {
+    "site": "Google Kickstart",
+
+    "link": "https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d83dc",
+    "name": "Robot Path Decoding"
+  },
+  {
+    "difficulty": 14,
+    "name": "2020 December Rectangular Pasture",
+    "level": "silver",
+    "sub_cat": "silver2"
+  },
+  {
+    "sub_cat": "platinum2",
+    "level": "platinum",
+    "difficulty": 34,
+    "name": "2015 December High Card Low Card"
+  },
+  {
+    "level": "silver",
+    "difficulty": 11,
+    "site": "usaco",
+    "sub_cat": "silver1",
+    "name": "2015 Open Bessie Goes Moo"
+  },
+  {
+    "difficulty": 14,
+    "level": "silver",
+    "site": "usaco",
+    "name": "2017 February Why Did the Cow Cross the Road II"
+  },
+  {
+    "name": "2018 February Rest Stops",
+    "difficulty": 11,
+    "sub_cat": "silver1",
+    "level": "silver"
+  },
+  {
+    "site": "usaco",
+
+    "difficulty": 37,
+    "name": "2020 December Cowmistry",
+    "sub_cat": "platinum3"
+  },
+  {
+    "site": "usaco",
+    "level": "silver",
+    "sub_cat": "silver1",
+    "difficulty": 11
+  },
+  {
+    "difficulty": 21,
+    "name": "2017 January Balanced Photo",
+    "site": "usaco",
+    "sub_cat": "gold1"
+  },
+  {
+    "level": "gold",
+    "sub_cat": "gold2",
+    "site": "usaco",
+    "name": "2019 January Sleepy Cow Sorting",
+    "difficulty": 24
+  },
+  {
+    "level": "bronze",
+    "difficulty": 4,
+    "name": "2018 February Hoofball",
+    "sub_cat": "bronze2"
+  },
+  {
+    "site": "usaco",
+
+    "name": "2019 January Shortcut",
+    "sub_cat": "gold3",
+    "level": "gold"
+  },
+  {
+    "level": "bronze",
+    "sub_cat": "bronze2",
+
+    "site": "usaco",
+    "difficulty": 4
+  },
+  {
+    "level": "platinum",
+    "site": "usaco",
+    "difficulty": 34,
+    "name": "2016 Open Bull in a China Shop"
+  },
+  {
+    "sub_cat": "platinum3",
+    "name": "2015 December Counting Haybales",
+    "level": "platinum",
+    "site": "usaco",
+    "difficulty": 37
+  },
+  {
+    "site": "usaco",
+
+    "level": "platinum",
+    "sub_cat": "platinum3",
+    "name": "2019 Open Valleys"
+  },
+  {
+    "site": "usaco",
+    "difficulty": 34,
+    "name": "2016 January Mowing the Field",
+    "level": "platinum"
+  },
+  {
+    "difficulty": 24,
+    "level": "gold",
+    "site": "usaco",
+
+    "sub_cat": "gold2"
+  },
+  {
+    "site": "usaco",
+    "difficulty": 21,
+
+    "level": "gold",
+    "name": "2020 December Replication"
+  },
+  {
+    "difficulty": 14,
+    "name": "2020 January Loan Repayment",
+    "site": "usaco",
+    "level": "silver",
+    "sub_cat": "silver2"
+  },
+  {
+    "level": "platinum",
+    "site": "usaco",
+    "difficulty": 34,
+    "name": "2016 February Fenced In"
+  },
+  {
+    "site": "usaco",
+    "name": "2014 December Cow Jog",
+    "level": "silver",
+    "difficulty": 17
+  },
+  {
+    "level": "bronze",
+
+    "difficulty": 1,
+    "name": "2016 December Square Pasture",
+    "sub_cat": "bronze1"
+  },
+  {
+    "name": "2019 February Painting the Barn",
+    "site": "usaco",
+    "level": "silver",
+    "sub_cat": "silver2",
+    "difficulty": 14
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "gold3",
+    "name": "2020 Open Exercise",
+
+    "difficulty": 27
+  },
+  {
+    "name": "2016 February Load Balancing",
+    "sub_cat": "bronze3",
+    "site": "usaco",
+
+    "level": "bronze"
+  },
+  {
+    "level": "silver",
+    "sub_cat": "silver1",
+    "site": "usaco",
+    "difficulty": 11
+  },
+  {
+    "difficulty": 11,
+    "site": "usaco",
+    "sub_cat": "silver1",
+    "level": "silver"
+  },
+  {
+    "sub_cat": "silver3",
+    "difficulty": 17,
+    "site": "usaco",
+    "name": "2020 December Stuck in a Rut"
+  },
+  {
+    "difficulty": 7,
+    "name": "2015 Open Trapped in the Haybales",
+    "site": "usaco",
+    "level": "bronze"
+  },
+  {
+    "level": "bronze",
+    "difficulty": 1,
+    "site": "usaco",
+    "name": "2020 Open Social Distancing I"
+  },
+  {
+    "name": "2017 Open Paired Up",
+    "sub_cat": "silver1",
+    "level": "silver",
+    "difficulty": 11
+  },
+  {
+    "difficulty": 37,
+    "sub_cat": "platinum3",
+    "site": "usaco",
+    "level": "platinum",
+    "name": "2021 Open Balanced Subsets"
+  },
+  {
+    "name": "2019 Open I Would Walk 500 Miles",
+    "level": "gold",
+    "sub_cat": "gold2",
+    "difficulty": 24,
+    "site": "usaco"
+  },
+  {
+    "difficulty": 7,
+    "level": "bronze",
+    "name": "2020 February Swapity Swap",
+    "sub_cat": "bronze3"
+  },
+  {
+    "link": "https://www.spoj.com/problems/BUSYMAN/",
+    "name": "busyman",
+
+    "site": "SPOJ"
+  },
+  {
+    "sub_cat": "gold3",
+    "site": "usaco",
+    "level": "gold",
+    "name": "2017 January Cow Navigation",
+    "difficulty": 27
+  },
+  {
+    "site": "usaco",
+    "level": "silver",
+
+    "name": "2017 January Secret Cow Code",
+    "sub_cat": "silver3"
+  },
+  {
+    "site": "usaco",
+    "difficulty": 14,
+    "level": "silver",
+
+    "sub_cat": "silver2"
+  },
+  {
+    "name": "2014 December Guard Mark",
+
+    "difficulty": 21,
+    "level": "gold",
+    "site": "usaco"
+  },
+  {
+    "difficulty": 17,
+
+    "name": "2018 January MooTube",
+    "sub_cat": "silver3",
+    "level": "silver"
+  },
+  {
+    "level": "silver",
+    "difficulty": 14,
+    "name": "2017 December Milk Measurement",
+    "site": "usaco",
+    "sub_cat": "silver2"
+  },
+  {
+    "name": "2021 Open Acowdemia I",
+
+    "level": "bronze",
+    "sub_cat": "bronze1",
+    "difficulty": 1
+  },
+  {
+    "sub_cat": "silver1",
+    "site": "usaco",
+    "level": "silver",
+    "difficulty": 11
+  },
+  {
+    "sub_cat": "bronze2",
+    "name": "2021 January Even More Odd Photos",
+    "level": "bronze",
+    "site": "usaco"
+  },
+  {
+    "level": "gold",
+    "name": "2017 February Why Did the Cow Cross the Road",
+    "difficulty": 21,
+    "sub_cat": "gold1",
+    "site": "usaco"
+  },
+  {
+    "site": "usaco",
+    "level": "gold",
+    "difficulty": 24,
+    "name": "2020 January Farmer John Solves 3SUM",
+    "sub_cat": "gold2"
+  },
+  {
+    "sub_cat": "silver2",
+    "name": "2016 February Load Balancing",
+    "site": "usaco",
+    "level": "silver"
+  },
+  {
+    "site": "usaco",
+    "name": "2015 February Superbull",
+    "level": "silver",
+    "sub_cat": "silver3",
+    "difficulty": 17
+  },
+  {
+    "difficulty": 7,
+    "sub_cat": "bronze3",
+    "name": "2018 January Out of Place",
+    "level": "bronze"
+  },
+  {
+    "site": "usaco",
+
+    "name": "2017 December Barn Painting",
+    "difficulty": 24,
+    "sub_cat": "gold2"
+  },
+  {
+    "difficulty": 11,
+    "name": "2016 December Counting Haybales",
+    "level": "silver",
+
+    "sub_cat": "silver1"
+  },
+  {
+    "sub_cat": "platinum3",
+    "site": "usaco",
+    "level": "platinum",
+
+    "difficulty": 37
+  },
+  {
+    "sub_cat": "gold1",
+
+    "name": "2019 February Cow Land",
+    "site": "usaco",
+    "difficulty": 21
+  },
+  {
+    "sub_cat": "platinum3",
+    "name": "2016 January Lights Out",
+    "difficulty": 37,
+    "level": "platinum"
+  },
+  {
+    "name": "Garland",
+    "link": "https://codeforces.com/problemset/problem/814/C",
+    "site": "code forces"
+  },
+  { "site": "SPOJ", "name": "ADASEA", "link": "" },
+  {
+    "difficulty": 11,
+
+    "sub_cat": "silver1",
+    "level": "silver",
+    "site": "usaco"
+  },
+  {
+    "level": "silver",
+
+    "site": "usaco",
+    "name": "2015 February Censoring",
+    "sub_cat": "silver1"
+  },
+  {
+    "name": "2015 February Cow Hopscotch",
+    "sub_cat": "bronze3",
+    "level": "bronze",
+
+    "site": "usaco"
+  },
+  {
+    "name": "2017 January Cow Tipping",
+    "sub_cat": "bronze3",
+
+    "level": "bronze",
+    "difficulty": 7
+  },
+  {
+    "site": "usaco",
+    "name": "2020 Open Cowntact Tracing",
+    "sub_cat": "bronze3",
+
+    "difficulty": 7
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "gold2",
+    "level": "gold",
+    "name": "2015 December Fruit Feast"
+  },
+  {
+    "sub_cat": "gold2",
+    "difficulty": 24,
+    "name": "2021 February Modern Art 3",
+    "level": "gold",
+    "site": "usaco"
+  },
+  {
+    "site": "usaco",
+    "name": "2019 February Painting the Barn",
+    "sub_cat": "gold3",
+    "difficulty": 27
+  },
+  {
+    "name": "2017 January \"Hoof",
+    "level": "silver",
+    "sub_cat": "silver2",
+    "difficulty": 14,
+    "site": "usaco"
+  },
+  {
+    "difficulty": 31,
+    "level": "platinum",
+    "site": "usaco",
+    "sub_cat": "platinum1"
+  },
+  {
+    "name": "Vacation",
+    "link": "http://codeforces.com/problemset/problem/698/A",
+    "site": "code forces"
+  },
+  {
+    "site": "SPOJ",
+    "link": "https://www.spoj.com/problems/ADAQUEUE/",
+
+    "name": "ADAQUEUE"
+  },
+  {
+    "sub_cat": "gold3",
+    "difficulty": 27,
+
+    "site": "usaco",
+    "name": "2020 February Delegation"
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "gold1",
+    "level": "gold",
+    "difficulty": 21
+  },
+  {
+    "level": "gold",
+    "site": "usaco",
+    "name": "2015 December High Card Low Card",
+    "difficulty": 21
+  },
+  {
+    "site": "SPOJ",
+    "name": "ONP",
+
+    "link": "https://www.spoj.com/problems/ONP/"
+  },
+  {
+    "sub_cat": "gold3",
+    "level": "gold",
+    "site": "usaco",
+
+    "difficulty": 27
+  },
+  {
+    "sub_cat": "platinum2",
+    "name": "2021 Open Routing Schemes",
+    "level": "platinum",
+    "difficulty": 34
+  },
+  {
+    "name": "2017 January Subsequence Reversal",
+    "level": "platinum",
+    "site": "usaco",
+    "sub_cat": "platinum3"
+  },
+  {
+    "name": "2020 Open Circus",
+    "site": "usaco",
+    "difficulty": 37,
+    "level": "platinum"
+  },
+  { "site": "SPOJ", "name": "LASTSHOT", "link": "" },
+  {
+    "name": "2020 Open Exercise",
+    "sub_cat": "platinum2",
+    "level": "platinum",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "silver2",
+
+    "site": "usaco",
+    "difficulty": 14,
+    "name": "2015 December High Card Winds"
+  },
+  {
+    "name": "2018 Open Milking Order",
+
+    "difficulty": 4,
+    "sub_cat": "bronze2",
+    "site": "usaco"
+  },
+  {
+    "level": "silver",
+
+    "difficulty": 17,
+    "name": "2017 Open Where's Bessie?",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "gold2",
+    "level": "gold",
+    "name": "2019 December Milk Visits",
+
+    "site": "usaco"
+  },
+  {
+    "name": "2014 December Marathon",
+    "site": "usaco",
+    "level": "bronze",
+
+    "sub_cat": "bronze1"
+  },
+  {
+    "difficulty": 31,
+    "level": "platinum",
+
+    "name": "2017 January Promotion Counting",
+    "sub_cat": "platinum1"
+  },
+  {
+    "sub_cat": "silver1",
+    "level": "silver",
+    "difficulty": 11,
+    "name": "2017 January Cow Dance Show"
+  },
+  {
+    "level": "bronze",
+    "name": "2016 February Milk Pails",
+    "site": "usaco",
+    "difficulty": 1
+  },
+  {
+    "name": "2015 Open Trapped in the Haybales",
+    "site": "usaco",
+    "difficulty": 14,
+    "level": "silver",
+    "sub_cat": "silver2"
+  },
+  {
+    "site": "SPOJ",
+    "link": "https://www.spoj.com/problems/MINSTACK/",
+    "name": "minstack"
+  },
+  {
+    "site": "usaco",
+    "difficulty": 11,
+    "name": "2021 January Dance Mooves",
+    "sub_cat": "silver1"
+  },
+  {
+    "difficulty": 0,
+    "level": "bronze",
+    "site": "usaco",
+    "name": "2015 January Meeting Time"
+  },
+  {
+    "name": "2018 December Convention",
+
+    "sub_cat": "silver1",
+    "difficulty": 11,
+    "level": "silver"
+  },
+  {
+    "name": "2015 January Cow Routing II",
+    "level": "bronze",
+
+    "site": "usaco",
+    "sub_cat": "bronze2"
+  },
+  {
+    "name": "2015 December Max Flow",
+    "level": "platinum",
+
+    "sub_cat": "platinum1",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "bronze1",
+    "site": "usaco",
+    "difficulty": 1,
+    "name": "2021 February Year of the Cow"
+  },
+  {
+    "name": "2018 January Cow at Large",
+    "difficulty": 24,
+    "site": "usaco",
+
+    "sub_cat": "gold2"
+  },
+  {
+    "sub_cat": "silver2",
+    "level": "silver",
+    "name": "2018 February Snow Boots",
+    "difficulty": 14,
+    "site": "usaco"
+  },
+  {
+    "name": "2016 Open Landscaping",
+    "level": "platinum",
+
+    "difficulty": 37,
+    "sub_cat": "platinum3"
+  },
+  {
+    "sub_cat": "silver3",
+    "difficulty": 17,
+    "level": "silver",
+
+    "site": "usaco"
+  },
+  {
+    "difficulty": 17,
+    "site": "usaco",
+    "level": "silver",
+    "sub_cat": "silver3",
+    "name": "2018 December Mooyo Mooyo"
+  },
+  {
+    "difficulty": 27,
+    "name": "2021 January Dance Mooves",
+    "site": "usaco",
+    "level": "gold"
+  },
+  {
+    "difficulty": 27,
+
+    "name": "2015 December Bessie's Dream",
+    "level": "gold",
+    "sub_cat": "gold3"
+  },
+  {
+    "site": "usaco",
+    "difficulty": 21,
+    "sub_cat": "gold1",
+
+    "name": "2020 Open Haircut"
+  },
+  {
+    "difficulty": 4,
+    "name": "2015 Open Bessie Gets Even",
+    "level": "bronze",
+    "sub_cat": "bronze2"
+  },
+  {
+    "difficulty": 34,
+    "level": "platinum",
+    "site": "usaco",
+    "name": "2016 December Team Building"
+  },
+  {
+    "difficulty": 31,
+
+    "name": "2018 January Lifeguards",
+    "site": "usaco",
+    "level": "platinum"
+  },
+  {
+    "site": "usaco",
+    "name": "2018 January MooTube",
+    "sub_cat": "gold1",
+    "difficulty": 21
+  },
+  {
+    "level": "platinum",
+    "difficulty": 34,
+
+    "sub_cat": "platinum2",
+    "name": "2019 December Bessie's Snow Cow"
+  },
+  {
+    "difficulty": 7,
+
+    "name": "2020 January Race",
+    "level": "bronze",
+    "sub_cat": "bronze3"
+  },
+  {
+    "site": "usaco",
+    "difficulty": 0,
+    "level": "bronze",
+    "sub_cat": "bronze4"
+  },
+  {
+    "level": "silver",
+    "sub_cat": "silver3",
+    "difficulty": 17,
+
+    "name": "2016 Open Closing the Farm"
+  },
+  {
+    "difficulty": 31,
+    "level": "platinum",
+    "sub_cat": "platinum1",
+
+    "name": "2018 December Balance Beam"
+  },
+  {
+    "level": "platinum",
+    "name": "2019 February Moorio Kart",
+    "site": "usaco",
+
+    "difficulty": 34
+  },
+  {
+    "name": "2020 January Falling Portals",
+    "sub_cat": "platinum3",
+
+    "site": "usaco",
+    "difficulty": 37
+  },
+  {
+    "name": "2018 Open Talent Show",
+    "site": "usaco",
+
+    "difficulty": 27,
+    "sub_cat": "gold3"
+  },
+  {
+    "name": "2018 December Mixing Milk",
+    "difficulty": 1,
+    "site": "usaco",
+    "sub_cat": "bronze1"
+  },
+  {
+    "sub_cat": "gold3",
+    "site": "usaco",
+    "difficulty": 27,
+
+    "level": "gold"
+  },
+  { "name": "CAM5", "link": "", "site": "SPOJ" },
+  {
+    "link": "https://codeforces.com/contest/702/problem/C",
+    "site": "code forces",
+
+    "name": "Cellular Network"
+  },
+  {
+    "name": "Alien",
+
+    "link": "https://www.spoj.com/problems/ALIEN/",
+    "site": "SPOJ"
+  },
+  { "link": "", "name": "BENEFACT", "site": "SPOJ" },
+  {
+    "sub_cat": "platinum2",
+    "difficulty": 34,
+    "level": "platinum",
+    "site": "usaco"
+  },
+  {
+    "level": "platinum",
+
+    "name": "2018 December Sort It Out",
+    "sub_cat": "platinum2",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "bronze1",
+    "site": "usaco",
+    "name": "2020 December Do You Know Your ABCs?",
+    "difficulty": 1,
+    "level": "bronze"
+  },
+  {
+    "sub_cat": "gold2",
+    "level": "gold",
+    "site": "usaco",
+
+    "difficulty": 24
+  },
+  {
+    "level": "gold",
+    "site": "usaco",
+    "sub_cat": "gold1",
+    "difficulty": 21
+  },
+  {
+    "name": "2016 January Promotion Counting",
+
+    "level": "bronze",
+    "difficulty": 1,
+    "sub_cat": "bronze1"
+  },
+  {
+    "level": "gold",
+
+    "difficulty": 21,
+    "name": "2016 February Circular Barn",
+    "sub_cat": "gold1"
+  },
+  {
+    "level": "platinum",
+    "difficulty": 37,
+    "site": "usaco",
+    "name": "2018 February Cow Gymnasts"
+  },
+  {
+    "sub_cat": "bronze2",
+    "name": "2014 December Crosswords",
+
+    "level": "bronze",
+    "site": "usaco"
+  },
+  {
+    "name": "2020 February Triangles",
+    "level": "bronze",
+
+    "difficulty": 1,
+    "sub_cat": "bronze1"
+  },
+  {
+    "difficulty": 37,
+
+    "level": "platinum",
+    "site": "usaco",
+    "name": "2019 February Mowing Mischief"
+  },
+  {
+    "site": "usaco",
+    "difficulty": 34,
+
+    "name": "2018 February New Barns",
+    "sub_cat": "platinum2"
+  },
+  {
+    "name": "2020 January Non-Decreasing Subsequences",
+    "difficulty": 34,
+    "level": "platinum",
+    "sub_cat": "platinum2",
+    "site": "usaco"
+  },
+  {
+    "difficulty": 24,
+    "name": "2015 February Censoring",
+    "sub_cat": "gold2",
+    "level": "gold"
+  },
+  {
+    "level": "gold",
+    "difficulty": 21,
+    "name": "2016 January Angry Cows",
+    "site": "usaco"
+  },
+  {
+    "difficulty": 7,
+    "level": "bronze",
+    "name": "2014 December Cow Jog",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "gold3",
+    "level": "gold",
+    "site": "usaco",
+    "name": "2021 February Count the Cows",
+    "difficulty": 27
+  },
+  {
+    "name": "2015 January It's All About the Base",
+    "level": "bronze",
+    "difficulty": 7,
+
+    "site": "usaco"
+  },
+  {
+    "name": "2016 December Cities and States",
+    "site": "usaco",
+
+    "level": "silver",
+    "difficulty": 14
+  },
+  {
+    "site": "usaco",
+    "difficulty": 7,
+    "level": "bronze",
+
+    "sub_cat": "bronze3"
+  },
+  {
+    "difficulty": 27,
+    "name": "2017 December Haybale Feast",
+
+    "level": "gold",
+    "sub_cat": "gold3"
+  },
+  {
+    "site": "usaco",
+    "name": "2015 Open Palindromic Paths",
+
+    "level": "gold",
+    "sub_cat": "gold2"
+  },
+  {
+    "name": "2019 December Livestock Lineup",
+    "site": "usaco",
+    "level": "bronze",
+    "sub_cat": "bronze3"
+  },
+  {
+    "site": "usaco",
+    "level": "bronze",
+
+    "difficulty": 4,
+    "name": "2016 January Angry Cows"
+  },
+  {
+    "sub_cat": "gold1",
+    "name": "2017 Open Bovine Genomics",
+    "difficulty": 21,
+
+    "level": "gold"
+  },
+  {
+    "difficulty": 1,
+
+    "name": "2017 February Why Did the Cow Cross the Road",
+    "level": "bronze",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "gold3",
+
+    "level": "gold",
+    "site": "usaco",
+    "difficulty": 27
+  },
+  {
+    "sub_cat": "gold1",
+    "name": "2016 Open Splitting the Field",
+    "site": "usaco",
+
+    "difficulty": 21
+  },
+  {
+    "site": "usaco",
+    "name": "2017 Open Switch Grass",
+    "difficulty": 34,
+    "sub_cat": "platinum2"
+  },
+  {
+    "site": "SPOJ",
+    "link": "https://www.spoj.com/problems/ARRAYSUB/",
+    "name": "Arraysub"
+  },
+  {
+    "name": "2021 Open Do You Know Your ABCs?",
+    "level": "silver",
+    "difficulty": 14,
+    "sub_cat": "silver2"
+  },
+  {
+    "level": "silver",
+    "sub_cat": "silver2",
+    "site": "usaco",
+    "name": "2020 February Triangles"
+  },
+  {
+    "difficulty": 1,
+    "sub_cat": "bronze1",
+    "level": "bronze",
+    "site": "usaco",
+    "name": "2017 January Don't Be Last!"
+  },
+  {
+    "link": "https://www.spoj.com/problems/CWC2015/",
+    "name": "CWC 2015",
+    "site": "SPOJ"
+  },
+  {
+    "level": "gold",
+    "site": "usaco",
+    "name": "2016 January Radio Contact",
+    "difficulty": 24
+  },
+  {
+    "level": "gold",
+    "site": "usaco",
+    "sub_cat": "gold2",
+    "name": "2016 Open Closing the Farm"
+  },
+  {
+    "difficulty": 4,
+
+    "site": "usaco",
+    "level": "bronze",
+    "sub_cat": "bronze2"
+  },
+  {
+    "level": "platinum",
+    "sub_cat": "platinum1",
+    "difficulty": 31,
+    "name": "2020 December Sleeping Cows",
+    "site": "usaco"
+  },
+  {
+    "difficulty": 17,
+    "name": "2019 January Mountain View",
+    "site": "usaco",
+    "sub_cat": "silver3",
+    "level": "silver"
+  },
+  {
+    "site": "usaco",
+    "difficulty": 21,
+    "sub_cat": "gold1",
+    "name": "2019 January Cow Poetry",
+    "level": "gold"
+  },
+  {
+    "name": "2015 Open Trapped in the Haybales",
+    "level": "gold",
+    "difficulty": 27,
+    "sub_cat": "gold3"
+  },
+  {
+    "level": "bronze",
+
+    "difficulty": 7,
+    "site": "usaco",
+    "sub_cat": "bronze3"
+  },
+  {
+    "sub_cat": "bronze3",
+    "site": "usaco",
+    "difficulty": 7,
+    "level": "bronze",
+    "name": "2019 February Measuring Traffic"
+  },
+  {
+    "level": "silver",
+    "site": "usaco",
+    "name": "2020 December Cowntagion",
+
+    "sub_cat": "silver1"
+  },
+  {
+    "level": "platinum",
+    "site": "usaco",
+    "sub_cat": "platinum2",
+    "name": "2020 December Spaceship"
+  },
+  {
+    "sub_cat": "gold3",
+    "name": "2020 December Square Pasture",
+    "level": "gold",
+    "site": "usaco",
+    "difficulty": 27
+  },
+  {
+    "difficulty": 4,
+
+    "name": "2016 December Block Game",
+    "level": "bronze",
+    "sub_cat": "bronze2"
+  },
+  {
+    "name": "2017 December Greedy Gift Takers",
+    "sub_cat": "platinum3",
+    "site": "usaco",
+    "difficulty": 37
+  },
+  {
+    "sub_cat": "gold1",
+    "level": "gold",
+    "name": "2018 Open Out of Sorts",
+    "difficulty": 21
+  },
+  {
+    "site": "usaco",
+    "name": "2021 February Minimizing Edges",
+    "level": "platinum",
+    "sub_cat": "platinum2"
+  },
+  {
+    "link": "https://www.hackerrank.com/challenges/coin-change/problem",
+    "name": "Coin Change",
+    "site": "Hackerrank"
+  },
+  {
+    "difficulty": 34,
+    "name": "2019 Open Compound Escape",
+    "site": "usaco",
+    "level": "platinum",
+    "sub_cat": "platinum2"
+  },
+  {
+    "name": "2017 December The Bovine Shuffle",
+    "sub_cat": "silver3",
+    "difficulty": 17,
+    "site": "usaco"
+  },
+  {
+    "site": "usaco",
+
+    "name": "2017 January \"Hoof",
+    "level": "gold",
+    "difficulty": 24
+  },
+  { "link": "", "name": "PT07Y", "site": "SPOJ" },
+  {
+    "difficulty": 7,
+    "name": "2019 Open Cow Evolution",
+    "sub_cat": "bronze3",
+    "level": "bronze"
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "bronze3",
+    "level": "bronze",
+    "difficulty": 7,
+    "name": "2016 December The Cow-Signal"
+  },
+  {
+    "sub_cat": "platinum1",
+    "name": "2016 February Load Balancing",
+    "level": "platinum",
+    "site": "usaco"
+  },
+  {
+    "difficulty": 1,
+    "sub_cat": "bronze1",
+    "name": "2019 February Sleepy Cow Herding",
+    "site": "usaco"
+  },
+  {
+    "name": "2021 Open Permutation",
+    "difficulty": 27,
+    "sub_cat": "gold3",
+    "level": "gold"
+  },
+  {
+    "name": "2020 February Equilateral Triangle",
+    "sub_cat": "platinum2",
+    "site": "usaco",
+    "difficulty": 34
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "gold3",
+    "name": "2015 January Grass Cownoisseur",
+    "difficulty": 27
+  },
+  {
+    "site": "usaco",
+    "level": "silver",
+    "difficulty": 14,
+    "sub_cat": "silver2",
+    "name": "2018 Open Lemonade Line"
+  },
+  {
+    "name": "Books",
+    "link": "https://codeforces.com/contest/279/problem/B",
+    "site": "code forces"
+  },
+  {
+    "sub_cat": "silver1",
+    "site": "usaco",
+    "name": "2021 Open Maze Tac Toe",
+
+    "difficulty": 11
+  },
+  {
+    "sub_cat": "bronze1",
+    "difficulty": 1,
+    "level": "bronze",
+    "name": "2017 December Blocked Billboard",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "silver1",
+    "name": "2019 February Sleepy Cow Herding",
+    "level": "silver",
+    "site": "usaco"
+  },
+  {
+    "name": "2019 February The Great Revegetation",
+    "sub_cat": "silver3",
+    "difficulty": 17,
+    "site": "usaco",
+    "level": "silver"
+  },
+  {
+    "sub_cat": "bronze3",
+    "name": "2016 January Mowing the Field",
+    "difficulty": 7,
+    "level": "bronze"
+  },
+  {
+    "name": "2016 Open Diamond Collector",
+    "level": "silver",
+
+    "site": "usaco",
+    "sub_cat": "silver2"
+  },
+  { "site": "SPOJ", "name": "MICEMAZE", "link": "" },
+  {
+    "level": "gold",
+
+    "sub_cat": "gold3",
+    "name": "2019 Open Balancing Inversions",
+    "difficulty": 27
+  },
+  {
+    "level": "silver",
+    "site": "usaco",
+    "name": "2015 February Cow Hopscotch",
+    "difficulty": 14
+  },
+  {
+    "sub_cat": "bronze3",
+    "name": "2020 December Stuck in a Rut",
+    "difficulty": 7,
+
+    "level": "bronze"
+  },
+  {
+    "level": "gold",
+    "sub_cat": "gold2",
+    "name": "2021 Open Portals",
+    "difficulty": 24,
+    "site": "usaco"
+  },
+  {
+    "name": "2015 December Fence Painting",
+    "level": "bronze",
+    "sub_cat": "bronze1",
+    "difficulty": 1
+  },
+  {
+    "name": "2020 Open The Moo Particle",
+
+    "sub_cat": "silver3",
+    "level": "silver",
+    "site": "usaco"
+  },
+  {
+    "level": "platinum",
+    "name": "2018 February Slingshot",
+    "site": "usaco",
+    "sub_cat": "platinum1",
+    "difficulty": 31
+  },
+  {
+    "name": "2020 February Help Yourself",
+    "difficulty": 37,
+    "sub_cat": "platinum3",
+    "level": "platinum"
+  },
+  {
+    "name": "2019 January Guess the Animal",
+    "sub_cat": "bronze3",
+    "level": "bronze",
+
+    "site": "usaco"
+  },
+  {
+    "level": "silver",
+    "difficulty": 17,
+    "name": "2016 January Build Gates",
+    "sub_cat": "silver3"
+  },
+  {
+    "difficulty": 14,
+    "level": "silver",
+    "sub_cat": "silver2",
+    "site": "usaco",
+    "name": "2018 December Convention II"
+  },
+  {
+    "site": "usaco",
+    "difficulty": 37,
+    "sub_cat": "platinum3",
+    "level": "platinum"
+  },
+  {
+    "difficulty": 24,
+
+    "site": "usaco",
+    "name": "2020 Open Favorite Colors",
+    "level": "gold"
+  },
+  {
+    "site": "usaco",
+    "name": "2015 Open Googol",
+    "level": "gold",
+    "difficulty": 21
+  },
+  {
+    "difficulty": 7,
+    "site": "usaco",
+
+    "name": "2017 February Why Did the Cow Cross the Road III",
+    "sub_cat": "bronze3"
+  },
+  {
+    "name": "2020 Plates",
+    "site": "Google Kickstart",
+    "link": "https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d40bb"
+  },
+  {
+    "name": "2017 February Why Did the Cow Cross the Road III",
+    "sub_cat": "silver3",
+    "level": "silver",
+    "difficulty": 17,
+    "site": "usaco"
+  },
+  {
+    "difficulty": 27,
+
+    "level": "gold",
+    "sub_cat": "gold3",
+    "site": "usaco"
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "gold1",
+
+    "level": "gold",
+    "difficulty": 21
+  },
+  {
+    "site": "usaco",
+    "difficulty": 11,
+
+    "name": "2016 January Angry Cows",
+    "level": "silver"
+  },
+  {
+    "difficulty": 34,
+    "site": "usaco",
+    "sub_cat": "platinum2",
+    "level": "platinum"
+  },
+  {
+    "sub_cat": "gold3",
+    "site": "usaco",
+
+    "difficulty": 27,
+    "level": "gold"
+  },
+  {
+    "level": "silver",
+    "name": "2017 Open Bovine Genomics",
+    "sub_cat": "silver2",
+
+    "difficulty": 14
+  },
+  {
+    "level": "bronze",
+
+    "difficulty": 7,
+    "name": "2018 Open Family Tree",
+    "sub_cat": "bronze3"
+  },
+  {
+    "site": "usaco",
+    "name": "2015 December Switching on the Lights",
+    "sub_cat": "silver1",
+    "difficulty": 11,
+    "level": "silver"
+  },
+  {
+    "name": "2020 February Delegation",
+    "site": "usaco",
+    "level": "platinum",
+    "difficulty": 31
+  },
+  {
+    "name": "2017 Open Modern Art",
+    "difficulty": 31,
+
+    "level": "platinum",
+    "sub_cat": "platinum1"
+  },
+  {
+    "difficulty": 37,
+    "sub_cat": "platinum3",
+    "level": "platinum",
+    "name": "2017 Open COWBASIC"
+  },
+  {
+    "level": "platinum",
+    "site": "usaco",
+    "name": "2018 December The Cow Gathering",
+    "sub_cat": "platinum3"
+  },
+  {
+    "level": "bronze",
+
+    "name": "2018 January Lifeguards",
+    "difficulty": 4,
+    "site": "usaco"
+  },
+  {
+    "site": "usaco",
+    "name": "2017 February Why Did the Cow Cross the Road",
+    "sub_cat": "platinum1",
+    "difficulty": 31,
+    "level": "platinum"
+  },
+  {
+    "sub_cat": "gold1",
+    "site": "usaco",
+    "name": "2018 February Snow Boots",
+    "difficulty": 21
+  },
+  {
+    "name": "2020 Allocation",
+    "site": "Google Kickstart",
+    "link": "https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f56"
+  },
+  {
+    "level": "bronze",
+    "site": "usaco",
+    "name": "2021 January Just Stalling",
+    "difficulty": 7,
+    "sub_cat": "bronze3"
+  },
+  {
+    "difficulty": 14,
+    "sub_cat": "silver2",
+    "level": "silver",
+    "name": "2016 January Subsequences Summing to Sevens",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "gold2",
+    "level": "gold",
+
+    "difficulty": 24,
+    "site": "usaco"
+  },
+  {
+    "level": "silver",
+    "sub_cat": "silver2",
+    "site": "usaco",
+
+    "name": "2019 December Meetings"
+  },
+  {
+    "difficulty": 31,
+
+    "site": "usaco",
+    "level": "platinum",
+    "name": "2019 January Redistricting"
+  },
+  {
+    "level": "bronze",
+    "site": "usaco",
+
+    "sub_cat": "bronze3",
+    "difficulty": 7
+  },
+  {
+    "level": "platinum",
+
+    "name": "2020 January Cave Paintings",
+    "sub_cat": "platinum1",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "gold2",
+    "site": "usaco",
+    "level": "gold",
+    "name": "2020 December Bovine Genetics"
+  },
+  {
+    "name": "2019 February Cow Dating",
+    "difficulty": 31,
+    "site": "usaco",
+    "level": "platinum",
+    "sub_cat": "platinum1"
+  },
+  {
+    "level": "gold",
+    "name": "2015 February Fencing the Herd",
+    "difficulty": 27,
+
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "gold1",
+    "level": "gold",
+    "difficulty": 21,
+    "site": "usaco",
+    "name": "2015 February Cow Hopscotch"
+  },
+  {
+    "site": "usaco",
+    "level": "silver",
+    "difficulty": 17,
+
+    "name": "2019 Open Fence Planning"
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "platinum1",
+    "name": "2021 January Sum of Distances",
+    "difficulty": 31
+  },
+  {
+    "sub_cat": "silver3",
+    "name": "2020 February Clock Tree",
+
+    "site": "usaco",
+    "difficulty": 17
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "silver2",
+    "level": "silver",
+    "difficulty": 14
+  },
+  {
+    "sub_cat": "gold1",
+    "name": "2021 Open United Cows of Farmer John",
+    "level": "gold",
+
+    "difficulty": 21
+  },
+  {
+    "level": "platinum",
+    "difficulty": 31,
+    "sub_cat": "platinum1",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "platinum2",
+    "level": "platinum",
+    "name": "2019 January Exercise Route",
+    "difficulty": 34
+  },
+  {
+    "sub_cat": "gold2",
+    "site": "usaco",
+
+    "name": "2014 December Marathon",
+    "difficulty": 24
+  },
+  {
+    "difficulty": 21,
+    "level": "gold",
+    "sub_cat": "gold1",
+    "site": "usaco"
+  },
+  {
+    "level": "bronze",
+    "sub_cat": "bronze4",
+
+    "difficulty": 0,
+    "site": "usaco"
+  },
+  {
+    "link": "https://www.spoj.com/problems/STPAR/",
+    "name": "STPAR",
+
+    "site": "SPOJ"
+  },
+  {
+    "difficulty": 1,
+    "level": "bronze",
+    "sub_cat": "bronze1",
+    "site": "usaco"
+  },
+  {
+    "link": "https://www.hackerrank.com/challenges/password-cracker/problem",
+    "name": "Password Cracker",
+    "site": "Hackerrank"
+  },
+  {
+    "site": "usaco",
+    "name": "2021 Open Acowdemia II",
+    "sub_cat": "bronze2",
+    "level": "bronze"
+  },
+  {
+    "name": "2019 January Icy Perimeter",
+    "sub_cat": "silver2",
+    "difficulty": 14,
+    "site": "usaco"
+  },
+  {
+    "level": "gold",
+    "site": "usaco",
+    "sub_cat": "gold2",
+
+    "difficulty": 24
+  },
+  {
+    "name": "2017 February Why Did the Cow Cross the Road II",
+    "sub_cat": "bronze2",
+    "level": "bronze",
+    "site": "usaco"
+  },
+  {
+    "name": "2016 Open 248",
+    "sub_cat": "gold3",
+    "difficulty": 27,
+
+    "level": "gold"
+  },
+  {
+    "site": "usaco",
+    "difficulty": 1,
+    "name": "2015 Open Moocryption",
+    "sub_cat": "bronze1"
+  },
+  {
+    "difficulty": 31,
+
+    "name": "2016 Open 262144",
+    "level": "platinum",
+    "sub_cat": "platinum1"
+  },
+  {
+    "name": "2019 December Greedy Pie Eaters",
+    "sub_cat": "platinum1",
+    "level": "platinum",
+
+    "site": "usaco"
+  },
+  {
+    "difficulty": 4,
+
+    "level": "bronze",
+    "name": "2017 Open Bovine Genomics",
+    "sub_cat": "bronze2"
+  },
+  {
+    "name": "2018 Open Milking Order",
+    "level": "gold",
+    "difficulty": 24,
+
+    "sub_cat": "gold2"
+  },
+  {
+    "level": "bronze",
+    "sub_cat": "bronze2",
+    "name": "2021 February Comfortable Cows",
+    "site": "usaco"
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "platinum3",
+    "name": "2017 February Why Did the Cow Cross the Road III",
+    "difficulty": 37
+  },
+  {
+    "name": "2017 January Building a Tall Barn",
+
+    "level": "platinum",
+    "site": "usaco",
+    "difficulty": 34
+  },
+  {
+    "name": "2016 December Lots of Triangles",
+    "site": "usaco",
+    "sub_cat": "platinum1",
+    "level": "platinum"
+  },
+  {
+    "level": "bronze",
+    "sub_cat": "bronze1",
+    "name": "2018 Open Team Tic Tac Toe",
+    "difficulty": 1
+  },
+  {
+    "site": "usaco",
+    "name": "2016 February Circular Barn",
+    "level": "bronze",
+
+    "difficulty": 4
+  },
+  {
+    "site": "usaco",
+    "level": "gold",
+
+    "difficulty": 24,
+    "sub_cat": "gold2"
+  },
+  {
+    "sub_cat": "silver1",
+    "level": "silver",
+    "name": "2019 Open Left Out",
+
+    "difficulty": 11
+  },
+  {
+    "name": "2015 January Moovie Mooving",
+    "sub_cat": "gold2",
+    "site": "usaco",
+    "difficulty": 24,
+    "level": "gold"
+  },
+  {
+    "site": "usaco",
+    "level": "gold",
+
+    "difficulty": 21,
+    "sub_cat": "gold1"
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "gold2",
+    "difficulty": 24,
+    "name": "2016 December Cow Checklist"
+  },
+  {
+    "name": "2020 January Photoshoot",
+    "site": "usaco",
+
+    "level": "bronze",
+    "difficulty": 4
+  },
+  { "name": "GCPC11J", "link": "", "site": "SPOJ" },
+  {
+    "difficulty": 7,
+    "name": "2021 February Clockwise Fence",
+    "site": "usaco",
+    "level": "bronze"
+  },
+  {
+    "name": "Angry Student",
+    "site": "code forces",
+    "link": "https://codeforces.com/problemset/problem/1287/A"
+  },
+  {
+    "difficulty": 37,
+    "name": "2018 Open Disruption",
+    "site": "usaco",
+
+    "level": "platinum"
+  },
+  {
+    "site": "usaco",
+    "level": "platinum",
+    "sub_cat": "platinum3",
+
+    "difficulty": 37
+  },
+  {
+    "difficulty": 14,
+    "sub_cat": "silver2",
+    "name": "2019 Open Cow Steeplechase II",
+    "site": "usaco"
+  },
+  {
+    "level": "platinum",
+    "site": "usaco",
+    "sub_cat": "platinum1",
+    "name": "2018 Open Out of Sorts"
+  },
+  {
+    "site": "Hackerrank",
+
+    "name": "Count Luck",
+    "link": "https://www.hackerrank.com/challenges/count-luck/problem"
+  },
+  {
+    "site": "usaco",
+    "sub_cat": "platinum3",
+    "name": "2021 February Counting Graphs",
+
+    "level": "platinum"
+  },
+  {
+    "difficulty": 7,
+    "level": "bronze",
+    "sub_cat": "bronze3",
+
+    "site": "usaco"
+  },
+  {
+    "level": "silver",
+    "name": "2021 January No Time to Paint",
+    "sub_cat": "silver2",
+    "difficulty": 14
+  },
+  {
+    "site": "usaco",
+
+    "name": "2020 January Wormhole Sort",
+    "difficulty": 17,
+    "level": "silver"
+  },
+  {
+    "name": "They're Everywhere",
+
+    "site": "code forces",
+    "link": "https://codeforces.com/problemset/problem/701/C"
+  },
+  {
+    "level": "bronze",
+    "site": "usaco",
+    "sub_cat": "bronze2",
+
+    "name": "2019 Open Milk Factory"
+  },
+  {
+    "sub_cat": "platinum3",
+    "difficulty": 37,
+    "site": "usaco",
+
+    "name": "2018 January Sprinklers"
+  },
+  {
+    "link": "https://www.spoj.com/problems/HOTELS/",
+    "name": "HOTELS",
+    "site": "SPOJ"
+  },
+  {
+    "level": "gold",
+    "sub_cat": "gold1",
+    "site": "usaco",
+
+    "difficulty": 21
+  },
+  {
+    "level": "bronze",
+    "site": "usaco",
+
+    "name": "2016 Open Diamond Collector",
+    "difficulty": 1
+  },
+  {
+    "difficulty": 14,
+    "name": "2021 February Year of the Cow",
+
+    "sub_cat": "silver2",
+    "level": "silver"
+  },
+  {
+    "level": "bronze",
+    "name": "2020 February Mad Scientists",
+    "difficulty": 4,
+    "site": "usaco"
+  },
+  {
+    "difficulty": 24,
+    "level": "gold",
+
+    "site": "usaco",
+    "sub_cat": "gold2"
+  },
+  { "name": "HIGHWAYS", "link": "", "site": "SPOJ" },
+  {
+    "level": "platinum",
+    "name": "2017 December Pushing a Box",
+    "sub_cat": "platinum2",
+    "site": "usaco",
+    "difficulty": 34
+  },
+  {
+    "site": "usaco",
+    "name": "2017 February Why Did the Cow Cross the Road II",
+    "sub_cat": "platinum2",
+    "difficulty": 34,
+    "level": "platinum"
+  },
+  {
+    "level": "bronze",
+    "difficulty": 4,
+    "site": "usaco",
+    "name": "2016 Open Bull in a China shop",
+    "sub_cat": "bronze2"
+  },
+  {
+    "name": "2015 February COW",
+    "level": "bronze",
+
+    "site": "usaco",
+    "sub_cat": "bronze2"
+  },
+  {
+    "sub_cat": "bronze1",
+    "level": "bronze",
+    "site": "usaco",
+    "difficulty": 1
+  },
+  {
+    "site": "usaco",
+    "difficulty": 31,
+    "level": "platinum",
+    "name": "2021 February No Time to Dry"
+  },
+  {
+    "level": "silver",
+
+    "site": "usaco",
+    "sub_cat": "silver3",
+    "name": "2015 Open Bessie's Birthday Buffet"
+  },
+  {
+    "site": "usaco",
+    "level": "gold",
+    "sub_cat": "gold3",
+    "difficulty": 27
+  },
+  {
+    "difficulty": 31,
+    "level": "platinum",
+    "sub_cat": "platinum1",
+    "name": "2017 December Standing Out from the Herd",
+    "site": "usaco"
+  },
+  {
+    "sub_cat": "silver3",
+
+    "site": "usaco",
+    "name": "2018 February Teleportation",
+    "difficulty": 17
+  },
+  {
+    "level": "gold",
+    "sub_cat": "gold2",
+
+    "site": "usaco",
+    "difficulty": 24
+  },
+  {
+    "site": "usaco",
+    "difficulty": 21,
+    "level": "gold",
+    "sub_cat": "gold1",
+    "name": "2018 December Fine Dining"
+  },
+  {
+    "name": "2021 January Telephone",
+    "level": "gold",
+
+    "site": "usaco",
+    "sub_cat": "gold2"
+  },
+  {
+    "site": "Hackerrank",
+
+    "name": "Torque and dev",
+    "link": "https://www.hackerrank.com/challenges/torque-and-development/problem"
+  },
+  {
+    "link": "https://www.spoj.com/problems/EKO/",
+
+    "site": "SPOJ",
+    "name": "EKO"
+  },
+  {
+    "name": "2019 December Milk Pumping",
+
+    "site": "usaco",
+    "difficulty": 21,
+    "sub_cat": "gold1"
+  },
+  {
+    "level": "silver",
+    "difficulty": 11,
+    "site": "usaco",
+    "name": "2017 December My Cow Ate My Homework"
+  },
+  {
+    "link": "https://www.hackerrank.com/challenges/maxsubarray/problem",
+
+    "site": "Hackerrank",
+    "name": "Max Sub Array"
+  },
+  {
+    "difficulty": 4,
+    "name": "2018 December The Bucket List",
+
+    "level": "bronze",
+    "site": "usaco"
+  },
+  {
+    "level": "gold",
+    "name": "2021 January Uddered but not Herd",
+    "difficulty": 21,
+
+    "site": "usaco"
+  },
+  {
+    "level": "silver",
+
+    "name": "2014 December Marathon",
+    "difficulty": 14,
+    "sub_cat": "silver2"
+  },
+  {
+    "level": "platinum",
+    "sub_cat": "platinum3",
+    "difficulty": 37,
+    "site": "usaco"
+  },
+  {
+    "site": "usaco",
+
+    "level": "bronze",
+    "sub_cat": "bronze2",
+    "name": "2019 February The Great Revegetation"
+  },
+  {
+    "link": "https://www.hackerrank.com/challenges/bfsshortreach/problem",
+    "site": "Hackerrank",
+    "name": "BFS Short Reach"
+  }
+]
