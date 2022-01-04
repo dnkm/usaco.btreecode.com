@@ -23,8 +23,7 @@ export default function App() {
         const initUserData = {
           name: auth.currentUser?.displayName,
           isActive: true,
-          isAdmin: false,
-          questions: []
+          isAdmin: false
         };
 
         if (d.exists()) {

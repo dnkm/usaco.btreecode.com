@@ -35,7 +35,7 @@ export default function Admin() {
   }
 
   async function loadStudent(id) {
-    let snapshot = await getDoc(doc(fstore, "user_data", id));
+    let snapshot = await getDoc(doc(fstore, "usaco-results", id));
     //console.log(snapshot.data().questions[0].qId);
     setStudent(snapshot.data().questions);
   }
@@ -52,7 +52,7 @@ export default function Admin() {
         </div>
       )}
       <hr />
-      <List admin={student} />
+      <List  />
     </div>
   );
 }

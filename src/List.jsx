@@ -45,7 +45,7 @@ export default function List() {
   let [sortField, setSortField] = useState("name");
   let [sortOrder, setSortOrder] = useState(true);
   const [params] = useSearchParams();
-  const { userData } = useContext(AppContext);
+  const { userData, user } = useContext(AppContext);
   let [showSubmit, setShowSubmit] = useState(false);
   let [completed, setCompleted] = useState([]);
   let [submitted, setSubmitted] = useState([]);
@@ -56,13 +56,17 @@ export default function List() {
     // getDocs(collection(fstore, "usaco_questions"))
     //   .then((ss) => ss.docs)
     //   .then(setQuestions);
-    setSubmitted([]);
-  }, [userData]);
+    if (user) {
+      loadSubmissions(user.uid);
+    }
+  }, [userData, user]);
 
-  // async function loadUser(id) {
-  //   let d = await getDoc(doc(fstore, "user_data", id));
-  //   setSubmitted(d.data().questions);
-  // }
+  async function loadSubmissions(id) {
+    let docRef = collection(fstore, "usaco-submissions");
+    let q = query(docRef, where("uid", "==", id))
+    let { docs } = await getDocs(q);
+    setSubmitted(docs.map(d => d.data()));
+  }
 
   function sortBy(field) {
     if (sortField === field) setSortOrder((p) => !p);
@@ -99,39 +103,38 @@ export default function List() {
     return ret;
   }, [sortField, sortOrder, params]);
 
+  async function updateSubmission(uid, qid, data) {
+    let c = collection(fstore, "usaco-submissions");
+    let q = query(c, where("uid", "==", uid), where("qid", "==", qid));
+    let { docs } = await getDocs(q);
+    if (docs.length >= 1) {
+      let d2 = docs[0];
+      let d = doc(fstore, "usaco-submissions", d2.id);
+
+      // update existing
+      if (data.date && doc.data().date) { 
+        alert("You have already submitted this");  
+        return; 
+      } else {
+        updateDoc(d, data)
+      }
+    } else {
+      // create a new
+      addDoc(c, { uid, qid, ...data })
+    }
+  }
+
   async function submitCode(uid, qid) {
-    let date = new Date();
+
     // code submissions
     let entry = {
       uid,
       qid,
-      code: text,
+      code: text
     };
-
     addDoc(collection(fstore, "usaco-codes"), entry);
-
-    let curDoc = await getDoc(doc(fstore, "usaco-results", uid));
-    let results = [];
-    if (curDoc.exists) {
-      results = curDoc.data().results;
-    }
-
-    let existingRecord = results.find((d) => d.qid === qid);
-
-    if (existingRecord && existingRecord.date ) {
-      alert("You have already submitted for this question");
-      return;
-    }
-    // if (!existingRecord)
-      
-    // else
-
-
-    // let questions = [...submitted, entry2];
-    // updateDoc(doc(fstore, "user_data", uid), { questions });
-    // setSubmitted(questions);
-    // setShowSubmit(false);
-    // setText("");
+    setShowSubmit(false);
+    setText(`//paste your code here`);
   }
 
   function signInWithGoogle() {
@@ -182,7 +185,10 @@ export default function List() {
             value={text}
           />
           <button onClick={() => setShowSubmit(false)}>close</button>
-          <button onClick={() => submitCode(auth.currentUser.uid, qId)}>
+          <button onClick={() => {
+            submitCode(user.uid, qId)
+            updateSubmission(user.uid, qId, { date: new Date() })
+          }}>
             submit
           </button>
         </div>
@@ -192,7 +198,7 @@ export default function List() {
           <tr>
             <th>#</th>
             {(auth.currentUser
-              ? "completed,site,level,name,difficulty,,,submission,date"
+              ? "completed,site,level,name,difficulty,submission/date"
               : "site,level,name,difficulty"
             )
               .split(",")
@@ -228,6 +234,8 @@ export default function List() {
               }}
               i={i}
               submitted={submitted}
+              updateSubmission={updateSubmission}
+              difficulty={q.difficulty}
             />
           ))}
         </tbody>
@@ -236,68 +244,64 @@ export default function List() {
   );
 }
 
-function Tr({ q, submit, submitted, i }) {
+function Tr({ q, submit, submitted, i, updateSubmission, difficulty }) {
   const { level, name, site } = q;
-  const { userData } = useContext(AppContext);
-  let [difficulty, setDifficulty] = useState(q.difficulty);
-  let [date, setDate] = useState();
+  const { userData, user } = useContext(AppContext);
   let [question, setQuestion] = useState([]);
 
   useEffect(() => {
+    setQuestion();
     if (submitted) {
-      setQuestion();
       submitted.forEach((sub) => {
-        if (sub.qId === q.id) {
+        if (sub.qid === i) {
           setQuestion(sub);
         }
       });
     }
   }, [submitted]);
 
-  function changeDifficulty(inc) {
-    // updateDoc(doc(fstore, "usaco_questions", q.id), {
-    //   difficulty: increment(inc)
-    // });
-    // setDifficulty(difficulty + inc);
-    //how to update the state
+  function displayComplete() {
+    if (!question.date) return "";
+    if (question.lh && question.ih) return "Both";
+    if (question.lh) return "LH";
+    if (question.ih) return "IH";
+    return "complete";
   }
 
   return (
     <tr>
       <td>{i}</td>
-      {userData && <td>{question && "check"}</td>}
+      {userData && <td>{question && displayComplete()}</td>}
       <td>{site}</td>
       <td>{level}</td>
       <td>{name}</td>
       <td>{difficulty}</td>
       {userData && (
-        <>
-          <td>{question?.LH ? "LH check" : "LH"}</td>
-          <td>{question?.LH ? "LH check" : "LH"}</td>
-          <td>
-            <button onClick={() => submit()}>submit</button>
-          </td>
-          <td>
-            {question
-              ? format(
-                  question.date.toDate !== undefined
-                    ? question.date.toDate()
-                    : question.date,
-                  "MM-dd"
-                )
-              : ""}
-          </td>
-        </>
-      )}
-
-      {userData?.isAdmin && (
         <td>
-          <button onClick={() => changeDifficulty(1)}>⬆</button>
+          {
+          //question &&
+            // ? (
+            //   <div>
+            //     {format(
+            //       question.date.toDate !== undefined
+            //         ? question.date.toDate()
+            //         : question.date,
+            //       "MM-dd"
+            //     )}
+            //   </div>
+            // ) : (
+            <button onClick={() => submit()}>submit</button>
+          }
         </td>
       )}
       {userData?.isAdmin && (
         <td>
-          <button onClick={() => changeDifficulty(-1)}>↓</button>
+          <button onClick={() => updateSubmission(user.uid, i, { lh: true })}>LH</button>
+        </td>
+      )}
+      {userData?.isAdmin && (
+        <td>
+          <button onClick={() => updateSubmission(user.uid, i, { ih: true })}>IH</button>
         </td>
       )}
     </tr>
