@@ -47,12 +47,30 @@ export default function List() {
   let [qId, setQId] = useState();
   let [text, setText] = useState(`//paste your code here`);
   let [studentId, setStudentId] = useState();
+  let [studentList, setStudentList] = useState([]);
 
   useEffect(() => {
-    if (user) {
+    if(userData?.isAdmin){
+      loadStudentList();
+    }
+    else if (user) {
       loadSubmissions(user.uid);
     }
   }, [userData, user]);
+
+  useEffect(()=>{
+    if(studentId){
+      loadSubmissions(studentId);
+    }
+  },[studentId])
+
+
+  async function loadStudentList() {
+    let ref = collection(fstore, "user_data");
+    let q = query(ref, where("isActive", "==", true));
+    let { docs } = await getDocs(q);
+    setStudentList(docs);
+  }
 
   async function loadSubmissions(id) {
     let docRef = collection(fstore, "usaco-submissions");
@@ -153,8 +171,7 @@ export default function List() {
       ))} */}
       {userData ? (
         <div>
-          <span>{userData?.name}</span>
-          <Link to="/admin">{userData?.isAdmin ? " (admin)" : ""}</Link>
+          <span>{(userData?.isAdmin && "(Admin)") +userData?.name}</span>
           <button
             onClick={() => {
               window.location.reload(false);
@@ -167,6 +184,18 @@ export default function List() {
       ) : (
         <button onClick={() => signInWithGoogle()}>Log In</button>
       )}
+      <div>
+      {userData?.isAdmin && (
+        <div>
+          {studentList.map((u) => (
+            <div key={u.id}>
+              <button onClick={() => setStudentId(u.id)}>{u.data().name}</button>
+            </div>
+          ))}
+        </div>
+      )}
+      <hr />
+    </div>
       {showSubmit && (
         <div>
           <AceEditor
