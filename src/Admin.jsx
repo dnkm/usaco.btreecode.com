@@ -7,7 +7,6 @@ import {
   where
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
 import { auth, fstore } from "./fire";
 import List from "./List";
 
@@ -15,7 +14,6 @@ export default function Admin() {
   let [user, setUser] = useState();
   let [userList, setUserList] = useState([]);
   let [student, setStudent] = useState([]);
-  let navigate = useNavigate();
 
   useEffect(() => {
     loadUser();
@@ -24,7 +22,7 @@ export default function Admin() {
   async function loadUser() {
     let ref = collection(fstore, "user_data");
     let q = query(ref, where("isActive", "==", true));
-    let { docs } = await getDocs(ref);
+    let { docs } = await getDocs(q);
 
     docs.forEach((d) => {
       if (d.id === auth.currentUser?.uid) {

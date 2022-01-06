@@ -3,18 +3,14 @@ import {
   addDoc,
   collection,
   doc,
-  getDoc,
   getDocs,
-  increment,
   query,
   updateDoc,
   where,
 } from "firebase/firestore";
-import { useContext, useEffect, useMemo, useReducer, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import {
   Link,
-  useNavigate,
-  useParams,
   useSearchParams,
 } from "react-router-dom";
 import AppContext from "./context";
@@ -47,15 +43,11 @@ export default function List() {
   const [params] = useSearchParams();
   const { userData, user } = useContext(AppContext);
   let [showSubmit, setShowSubmit] = useState(false);
-  let [completed, setCompleted] = useState([]);
   let [submitted, setSubmitted] = useState([]);
   let [qId, setQId] = useState();
   let [text, setText] = useState(`//paste your code here`);
 
   useEffect(() => {
-    // getDocs(collection(fstore, "usaco_questions"))
-    //   .then((ss) => ss.docs)
-    //   .then(setQuestions);
     if (user) {
       loadSubmissions(user.uid);
     }
@@ -112,14 +104,16 @@ export default function List() {
       let d = doc(fstore, "usaco-submissions", d2.id);
 
       // update existing
-      if (data.date && doc.data().date) { 
+      if (data.date && d2.data().date) { 
         alert("You have already submitted this");  
         return; 
       } else {
+        submitCode(uid, qid);
         updateDoc(d, data)
       }
     } else {
       // create a new
+      submitCode(uid, qid);
       addDoc(c, { uid, qid, ...data })
     }
   }
@@ -186,7 +180,6 @@ export default function List() {
           />
           <button onClick={() => setShowSubmit(false)}>close</button>
           <button onClick={() => {
-            submitCode(user.uid, qId)
             updateSubmission(user.uid, qId, { date: new Date() })
           }}>
             submit
@@ -279,19 +272,19 @@ function Tr({ q, submit, submitted, i, updateSubmission, difficulty }) {
       {userData && (
         <td>
           {
-          //question &&
-            // ? (
-            //   <div>
-            //     {format(
-            //       question.date.toDate !== undefined
-            //         ? question.date.toDate()
-            //         : question.date,
-            //       "MM-dd"
-            //     )}
-            //   </div>
-            // ) : (
+          (question && question.date)
+            ? (
+              <div>
+                {format(
+                  question?.date.toDate !== undefined
+                    ? question.date.toDate()
+                    : question.date,
+                  "MM-dd"
+                )}
+              </div>
+            ) : (
             <button onClick={() => submit()}>submit</button>
-          }
+            )}
         </td>
       )}
       {userData?.isAdmin && (
@@ -301,7 +294,9 @@ function Tr({ q, submit, submitted, i, updateSubmission, difficulty }) {
       )}
       {userData?.isAdmin && (
         <td>
-          <button onClick={() => updateSubmission(user.uid, i, { ih: true })}>IH</button>
+          <button onClick={() => //console.log(question?.date.toDate !== undefined ?  "defined" : "undefined")
+            updateSubmission(user.uid, i, { ih: true })
+            }>IH</button>
         </td>
       )}
     </tr>

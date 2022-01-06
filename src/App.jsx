@@ -2,7 +2,6 @@ import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Add from "./Add";
 import Admin from "./Admin";
 import AppContext from "./context";
 import { auth, fstore } from "./fire";
