@@ -4,15 +4,13 @@ import {
   collection,
   doc,
   getDocs,
+  getDoc,
   query,
   updateDoc,
   where,
 } from "firebase/firestore";
 import { useContext, useEffect, useMemo, useState } from "react";
-import {
-  Link,
-  useSearchParams,
-} from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import AppContext from "./context";
 import { auth, fstore } from "./fire";
 import AceEditor from "react-ace";
@@ -43,27 +41,39 @@ export default function List() {
   const [params] = useSearchParams();
   const { userData, user } = useContext(AppContext);
   let [showSubmit, setShowSubmit] = useState(false);
-  let [submitted, setSubmitted] = useState([]);
-  let [qId, setQId] = useState();
-  let [text, setText] = useState(`//paste your code here`);
-  let [studentId, setStudentId] = useState();
+  let [submissions, setSubmissions] = useState([]);
+  let [qId, setQId] = useState(undefined);
+  let [code, setCode] = useState(`//paste your code here`);
+  let [studentId, setStudentId] = useState(undefined);
   let [studentList, setStudentList] = useState([]);
 
   useEffect(() => {
-    if(userData?.isAdmin){
+    if (userData?.isAdmin) {
       loadStudentList();
-    }
-    else if (user) {
+    } else if (user) {
       loadSubmissions(user.uid);
     }
   }, [userData, user]);
 
-  useEffect(()=>{
-    if(studentId){
+  useEffect(() => {
+    if (studentId) {
       loadSubmissions(studentId);
     }
-  },[studentId])
+  }, [studentId]);
 
+  useEffect(() => {
+    if (!qId) return;
+    // if (!studentId) return;
+
+    getDocs(
+      query(collection(fstore, "usaco-codes"), where(`uid`, "==", user.uid), where(`qid`, "==", qId))
+    ).then((snapshot) => {
+      let docs = snapshot.docs;
+      console.log("fetching code", docs.length)
+      if (docs.length === 0) setCode(`//paste your code here`);
+      else setCode(docs[0].data().code);
+    });
+  }, [qId]);
 
   async function loadStudentList() {
     let ref = collection(fstore, "user_data");
@@ -74,9 +84,9 @@ export default function List() {
 
   async function loadSubmissions(id) {
     let docRef = collection(fstore, "usaco-submissions");
-    let q = query(docRef, where("uid", "==", id))
+    let q = query(docRef, where("uid", "==", id));
     let { docs } = await getDocs(q);
-    setSubmitted(docs.map(d => d.data()));
+    setSubmissions(docs.map((d) => d.data()));
   }
 
   function sortBy(field) {
@@ -114,7 +124,8 @@ export default function List() {
     return ret;
   }, [sortField, sortOrder, params]);
 
-  async function updateSubmission(uid, qid, data) {
+  async function updateSubmission(uid, qid, data, doSubmitCode = false) {
+    console.log("doSubmitCode", doSubmitCode);
     let c = collection(fstore, "usaco-submissions");
     let q = query(c, where("uid", "==", uid), where("qid", "==", qid));
     let { docs } = await getDocs(q);
@@ -123,31 +134,32 @@ export default function List() {
       let d = doc(fstore, "usaco-submissions", d2.id);
 
       // update existing
-      if (data.date && d2.data().date) { 
-        alert("You have already submitted this");  
-        return; 
+      if (data.date && d2.data().date) {
+        alert("You have already submitted this");
+        return;
       } else {
-        submitCode(uid, qid);
-        updateDoc(d, data)
+        if (doSubmitCode) submitCode(uid, qid);
+        updateDoc(d, data);
       }
     } else {
       // create a new
-      submitCode(uid, qid);
-      addDoc(c, { uid, qid, ...data })
+      if (doSubmitCode) submitCode(uid, qid);
+      let { id } = await addDoc(c, { uid, qid, ...data });
+      let newDoc = await getDoc(doc(c, id));
+      setSubmissions((p) => [...p, newDoc.data()]);
     }
   }
 
   async function submitCode(uid, qid) {
-
     // code submissions
     let entry = {
       uid,
       qid,
-      code: text
+      code: code,
     };
     addDoc(collection(fstore, "usaco-codes"), entry);
     setShowSubmit(false);
-    setText(`//paste your code here`);
+    setCode(`//paste your code here`);
   }
 
   function signInWithGoogle() {
@@ -171,7 +183,7 @@ export default function List() {
       ))} */}
       {userData ? (
         <div>
-          <span>{(userData?.isAdmin && "(Admin)") +userData?.name}</span>
+          <span>{(userData?.isAdmin && "(Admin)") + userData?.name}</span>
           <button
             onClick={() => {
               window.location.reload(false);
@@ -185,17 +197,19 @@ export default function List() {
         <button onClick={() => signInWithGoogle()}>Log In</button>
       )}
       <div>
-      {userData?.isAdmin && (
-        <div>
-          {studentList.map((u) => (
-            <div key={u.id}>
-              <button onClick={() => setStudentId(u.id)}>{u.data().name}</button>
-            </div>
-          ))}
-        </div>
-      )}
-      <hr />
-    </div>
+        {userData?.isAdmin && (
+          <div>
+            {studentList.map((u) => (
+              <div key={u.id}>
+                <button onClick={() => setStudentId(u.id)}>
+                  {u.data().name}
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+        <hr />
+      </div>
       {showSubmit && (
         <div>
           <AceEditor
@@ -203,15 +217,17 @@ export default function List() {
             theme="monokai"
             //value={text}
             width={"70%"}
-            onChange={setText}
+            onChange={setCode}
             name="UNIQUE_ID_OF_DIV"
             editorProps={{ $blockScrolling: true }}
-            value={text}
+            value={code}
           />
           <button onClick={() => setShowSubmit(false)}>close</button>
-          <button onClick={() => {
-            updateSubmission(user.uid, qId, { date: new Date() })
-          }}>
+          <button
+            onClick={() => {
+              updateSubmission(user.uid, qId, { date: new Date() }, true);
+            }}
+          >
             submit
           </button>
         </div>
@@ -256,9 +272,9 @@ export default function List() {
                 setQId(i);
               }}
               i={i}
-              submitted={submitted}
+              submissions={submissions}
               updateSubmission={updateSubmission}
-              difficulty={q.difficulty}
+              isSelected={qId === i}
             />
           ))}
         </tbody>
@@ -267,66 +283,61 @@ export default function List() {
   );
 }
 
-function Tr({ q, submit, submitted, i, updateSubmission, difficulty }) {
-  const { level, name, site } = q;
+function Tr({ q, submit, submissions, i, updateSubmission, isSelected }) {
+  const { level, name, site, difficulty } = q;
   const { userData, user } = useContext(AppContext);
-  let [question, setQuestion] = useState([]);
 
-  useEffect(() => {
-    setQuestion();
-    if (submitted) {
-      submitted.forEach((sub) => {
-        if (sub.qid === i) {
-          setQuestion(sub);
-        }
-      });
-    }
-  }, [submitted]);
+  const submission = submissions?.find((v) => v.qid === i);
 
   function displayComplete() {
-    if (!question.date) return "";
-    if (question.lh && question.ih) return "Both";
-    if (question.lh) return "LH";
-    if (question.ih) return "IH";
-    return "complete";
+    let subdate =
+      submission &&
+      submission.date &&
+      format(submission.date.toDate(), "MM-dd");
+
+    return `${submission.date ? "✅" : ""}${submission.lh ? "💙" : ""}${
+      submission.ih ? "💜" : ""
+    }${submission?.date ? subdate : ""}`;
   }
 
   return (
-    <tr>
+    <tr
+      style={{
+        backgroundColor: isSelected ? "pink" : "white",
+      }}
+    >
       <td>{i}</td>
-      {userData && <td>{question && displayComplete()}</td>}
+      {userData && <td>{submission && displayComplete()}</td>}
       <td>{site}</td>
       <td>{level}</td>
       <td>{name}</td>
       <td>{difficulty}</td>
       {userData && (
         <td>
-          {
-          (question && question.date)
-            ? (
-              <div>
-                {format(
-                  question?.date.toDate !== undefined
-                    ? question.date.toDate()
-                    : question.date,
-                  "MM-dd"
-                )}
-              </div>
-            ) : (
+          {submission && submission.date ? (
+            <button onClick={() => submit()}>View Code</button>
+          ) : (
             <button onClick={() => submit()}>submit</button>
-            )}
+          )}
         </td>
       )}
       {userData?.isAdmin && (
         <td>
-          <button onClick={() => updateSubmission(user.uid, i, { lh: true })}>LH</button>
+          <button onClick={() => updateSubmission(user.uid, i, { lh: true })}>
+            LH
+          </button>
         </td>
       )}
       {userData?.isAdmin && (
         <td>
-          <button onClick={() => //console.log(question?.date.toDate !== undefined ?  "defined" : "undefined")
-            updateSubmission(user.uid, i, { ih: true })
-            }>IH</button>
+          <button
+            onClick={() =>
+              //console.log(question?.date.toDate !== undefined ?  "defined" : "undefined")
+              updateSubmission(user.uid, i, { ih: true })
+            }
+          >
+            IH
+          </button>
         </td>
       )}
     </tr>
