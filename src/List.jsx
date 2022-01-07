@@ -21,6 +21,8 @@ import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/theme-monokai";
 import { format } from "date-fns";
 import QUESTIONS from "./data/questions.json";
+import CodeSubmission from "./CodeSubmission";
+import Button from "./components/Button";
 
 function levelToNum(level) {
   switch (level) {
@@ -36,7 +38,7 @@ function levelToNum(level) {
 }
 
 export default function List() {
-  let [sortField, setSortField] = useState("name");
+  let [sortField, setSortField] = useState("id");
   let [sortOrder, setSortOrder] = useState(true);
   const [params] = useSearchParams();
   const { userData, user } = useContext(AppContext);
@@ -51,7 +53,7 @@ export default function List() {
     if (userData?.isAdmin) {
       loadStudentList();
     } else if (user) {
-      loadSubmissions(user.uid);
+      setStudentId(user.uid);
     }
   }, [userData, user]);
 
@@ -66,10 +68,14 @@ export default function List() {
     // if (!studentId) return;
 
     getDocs(
-      query(collection(fstore, "usaco-codes"), where(`uid`, "==", user.uid), where(`qid`, "==", qId))
+      query(
+        collection(fstore, "usaco-codes"),
+        where(`uid`, "==", user.uid),
+        where(`qid`, "==", qId)
+      )
     ).then((snapshot) => {
       let docs = snapshot.docs;
-      console.log("fetching code", docs.length)
+      console.log("fetching code", docs.length);
       if (docs.length === 0) setCode(`//paste your code here`);
       else setCode(docs[0].data().code);
     });
@@ -102,7 +108,7 @@ export default function List() {
   // }
 
   let sorted = useMemo(() => {
-    let ret = [...QUESTIONS];
+    let ret = QUESTIONS.map((v, i) => ({ ...v, id: i }));
 
     // if (params.get("level"))
     //   ret = ret.filter((v) => v.data().level === params.get("level"));
@@ -183,24 +189,34 @@ export default function List() {
       ))} */}
       {userData ? (
         <div>
-          <span>{(userData?.isAdmin && "(Admin)") + userData?.name}</span>
-          <button
+          <span className="mx-4">
+            {(userData?.isAdmin ? "(Admin) " : "") + userData?.name}
+          </span>
+          <Button
             onClick={() => {
               window.location.reload(false);
               signOut(auth);
             }}
           >
             Sign Out
-          </button>
+          </Button>
         </div>
       ) : (
-        <button onClick={() => signInWithGoogle()}>Log In</button>
+        <Button onClick={() => signInWithGoogle()} className={"m-3"}>
+          Log In
+        </Button>
       )}
       <div>
         {userData?.isAdmin && (
-          <div>
+          <div className="flex flex-wrap my-2">
             {studentList.map((u) => (
-              <div key={u.id}>
+              <div
+                key={u.id}
+                className={
+                  "mx-3 rounded-lg px-2 bg-white drop-shadow-none  " +
+                  (u.id === studentId ? "bg-gray-200" : "hover:drop-shadow-md")
+                }
+              >
                 <button onClick={() => setStudentId(u.id)}>
                   {u.data().name}
                 </button>
@@ -211,34 +227,21 @@ export default function List() {
         <hr />
       </div>
       {showSubmit && (
-        <div>
-          <AceEditor
-            mode={"java"}
-            theme="monokai"
-            //value={text}
-            width={"70%"}
-            onChange={setCode}
-            name="UNIQUE_ID_OF_DIV"
-            editorProps={{ $blockScrolling: true }}
-            value={code}
-          />
-          <button onClick={() => setShowSubmit(false)}>close</button>
-          <button
-            onClick={() => {
-              updateSubmission(user.uid, qId, { date: new Date() }, true);
-            }}
-          >
-            submit
-          </button>
-        </div>
+        <CodeSubmission
+          close={() => setShowSubmit(false)}
+          code={code}
+          setCode={setCode}
+          updateSubmission={updateSubmission}
+          uid={user.uid}
+          qid={qId}
+        />
       )}
       <table border="1">
         <thead>
           <tr>
-            <th>#</th>
             {(auth.currentUser
-              ? "completed,site,level,name,difficulty,submission/date"
-              : "site,level,name,difficulty"
+              ? "id,completed,site,level,name,difficulty,submission/date"
+              : "id,site,level,name,difficulty"
             )
               .split(",")
               .map((v, i) => (
@@ -254,7 +257,7 @@ export default function List() {
                   {v.replace("_", " ")}{" "}
                   {(() => {
                     if (sortField === v) {
-                      if (sortOrder) return "⬆";
+                      if (sortOrder) return "↑";
                       else return "↓";
                     }
                   })()}
@@ -263,18 +266,18 @@ export default function List() {
           </tr>
         </thead>
         <tbody>
-          {sorted.map((q, i) => (
+          {sorted.map((q) => (
             <Tr
-              key={i}
+              key={q.id}
               q={q}
               submit={() => {
                 setShowSubmit(true);
-                setQId(i);
+                setQId(q.id);
               }}
-              i={i}
+              i={q.id}
               submissions={submissions}
               updateSubmission={updateSubmission}
-              isSelected={qId === i}
+              isSelected={qId === q.id}
             />
           ))}
         </tbody>
@@ -306,38 +309,38 @@ function Tr({ q, submit, submissions, i, updateSubmission, isSelected }) {
         backgroundColor: isSelected ? "pink" : "white",
       }}
     >
-      <td>{i}</td>
+      <td className="flex justify-center">{i}</td>
       {userData && <td>{submission && displayComplete()}</td>}
-      <td>{site}</td>
+      <td className="flex justify-center">{site}</td>
       <td>{level}</td>
       <td>{name}</td>
-      <td>{difficulty}</td>
+      <td className="flex justify-center">{difficulty}</td>
       {userData && (
         <td>
           {submission && submission.date ? (
-            <button onClick={() => submit()}>View Code</button>
+            <Button onClick={() => submit()}>View Code</Button>
           ) : (
-            <button onClick={() => submit()}>submit</button>
+            <Button onClick={() => submit()}>submit</Button>
           )}
         </td>
       )}
       {userData?.isAdmin && (
         <td>
-          <button onClick={() => updateSubmission(user.uid, i, { lh: true })}>
+          <Button onClick={() => updateSubmission(user.uid, i, { lh: true })}>
             LH
-          </button>
+          </Button>
         </td>
       )}
       {userData?.isAdmin && (
         <td>
-          <button
+          <Button
             onClick={() =>
               //console.log(question?.date.toDate !== undefined ?  "defined" : "undefined")
               updateSubmission(user.uid, i, { ih: true })
             }
           >
             IH
-          </button>
+          </Button>
         </td>
       )}
     </tr>
