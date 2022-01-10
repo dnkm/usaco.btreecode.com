@@ -12,13 +12,10 @@ export default function CompletedTable({
   return (
     <div>
       <div>Completed</div>
-      <table border="1">
+      <table border="1" className="table-fixed">
         <thead>
           <tr>
-            {(auth.currentUser
-              ? "id,completed,site,level,name,difficulty,submission,date"
-              : "id,site,level,name,difficulty"
-            )
+            {"id,completed,site,level,name,difficulty,submission,date"
               .split(",")
               .map((v, i) => (
                 <th
@@ -26,6 +23,7 @@ export default function CompletedTable({
                   style={{
                     textTransform: "capitalize",
                   }}
+                  className="px-4 "
                 >
                   {v.replace("_", " ")}{" "}
                 </th>

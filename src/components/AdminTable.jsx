@@ -20,10 +20,7 @@ export default function AdminTable({
       <table border="1">
         <thead>
           <tr>
-            {(auth.currentUser
-              ? ",id,completed,site,level,name,difficulty"
-              : "id,site,level,name,difficulty"
-            )
+            {",id,completed,site,level,name,difficulty"
               .split(",")
               .map((v, i) => (
                 <th

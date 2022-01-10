@@ -15,21 +15,17 @@ export default function ToDoTable({
       <table border="1">
         <thead>
           <tr>
-            {(auth.currentUser
-              ? "id,site,level,name,difficulty,due date"
-              : "id,site,level,name,difficulty"
-            )
-              .split(",")
-              .map((v, i) => (
-                <th
-                  key={i}
-                  style={{
-                    textTransform: "capitalize",
-                  }}
-                >
-                  {v.replace("_", " ")}{" "}
-                </th>
-              ))}
+            {"id,site,level,name,difficulty,due date".split(",").map((v, i) => (
+              <th
+                key={i}
+                style={{
+                  textTransform: "capitalize",
+                }}
+                className="px-4"
+              >
+                {v.replace("_", " ")}{" "}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody>

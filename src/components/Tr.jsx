@@ -37,11 +37,7 @@ export default function Tr({
   }
 
   return (
-    <tr
-      style={{
-        backgroundColor: isSelected ? "pink" : "white",
-      }}
-    >
+    <tr>
       {isAdmin && (
         <>
           {submission ? (
@@ -63,17 +59,27 @@ export default function Tr({
           )}
         </>
       )}
-      <td className="">{q.id}</td>
+      <td className="text-center">{q.id}</td>
       {userData && !isAssigned && (
-        <td className="">{submission && displayComplete()}</td>
+        <td className="px-5">{submission && displayComplete()}</td>
       )}
-      <td className="">{site}</td>
-      <td>{level}</td>
-      <td>{name}</td>
-      <td className="flex justify-center mx-2">{difficulty}</td>
-      {userData && isAssigned && <td className={(format(new Date(), "yyyy-MM-dd") > submission.dueDate) ? "text-red-500" : ""}>{submission.dueDate}</td>}
+      <td className="text-center">{site}</td>
+      <td className="text-center">{level}</td>
+      <td className="text-center">{name}</td>
+      <td className="text-center">{difficulty}</td>
+      {userData && isAssigned && (
+        <td
+          className={
+            format(new Date(), "yyyy-MM-dd") > submission.dueDate
+              ? "text-red-500"
+              : ""
+          }
+        >
+          {submission.dueDate}
+        </td>
+      )}
       {userData && !isAdmin && (
-        <td className="mx-4">
+        <td className="text-center">
           {submission && submission.date ? (
             <Button onClick={() => submit()}>View Code</Button>
           ) : (
@@ -81,7 +87,11 @@ export default function Tr({
           )}
         </td>
       )}
-      {isCompleted && <td>{format(submission.date.toDate(), "MM-dd")}</td>}
+      {isCompleted && (
+        <td className="flex justify-center">
+          {format(submission.date.toDate(), "MM-dd")}
+        </td>
+      )}
       {isAdmin && (
         <td>
           <Button
