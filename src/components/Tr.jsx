@@ -18,6 +18,7 @@ export default function Tr({
 
   const submission = submissions?.find((v) => v.qid === q.id);
   let [disable, setDisable] = useState(true);
+  let [showDate, setShowDate] = useState(false);
 
   function displayComplete() {
     return `${submission.date ? "✅" : ""}${submission.lh ? "LH" : ""}${
@@ -43,18 +44,24 @@ export default function Tr({
           {submission ? (
             <>{submission?.date ? "Completed" : "Assigned"}</>
           ) : (
-            <td className="text-xs cursor-pointer">
-              <form onSubmit={assign}>
-                <input type="date" name="dueDate" />
-                <Button
-                  onClick={() => {
-                    setDisable(false);
-                  }}
-                  disable={disable}
-                >
-                  Assign
-                </Button>
-              </form>
+            <td className="text-xs cursor-pointer relative">
+              {showDate && (
+                <div className="absolute rounded-lg bg-white drop-shadow z-10 mt-7">
+                  <form onSubmit={assign} className="flex flex-col">
+                    <input className="" type="date" name="dueDate" />
+                    <Button
+                      onClick={() => {
+                        setDisable(false);
+                        setShowDate(false);
+                      }}
+                      disable={disable}
+                    >
+                      +
+                    </Button>
+                  </form>
+                </div>
+              )}
+              <Button onClick={() => setShowDate(!showDate)}>Assign</Button>
             </td>
           )}
         </>
