@@ -25,7 +25,7 @@ export default function Tr({
     }`;
   }
 
-  function submit(ev) {
+  function assign(ev) {
     ev.preventDefault();
     if (ev.target.dueDate.value === "") {
       let date = new Date();
@@ -48,7 +48,7 @@ export default function Tr({
             <>{submission?.date ? "Completed" : "Assigned"}</>
           ) : (
             <td className="text-xs cursor-pointer">
-              <form onSubmit={submit}>
+              <form onSubmit={assign}>
                 <input type="date" name="dueDate" />
                 <Button
                   onClick={() => {
@@ -71,7 +71,7 @@ export default function Tr({
       <td>{level}</td>
       <td>{name}</td>
       <td className="flex justify-center mx-2">{difficulty}</td>
-      {userData && isAssigned && <td>{submission.dueDate}</td>}
+      {userData && isAssigned && <td className={(format(new Date(), "yyyy-MM-dd") > submission.dueDate) ? "text-red-500" : ""}>{submission.dueDate}</td>}
       {userData && !isAdmin && (
         <td className="mx-4">
           {submission && submission.date ? (
