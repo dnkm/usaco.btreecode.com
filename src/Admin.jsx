@@ -1,55 +1,64 @@
+import { format } from "date-fns";
 import {
   collection,
   doc,
   getDoc,
   getDocs,
   query,
-  where
+  where,
 } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import AppContext from "./context";
 import { auth, fstore } from "./fire";
 import List from "./List";
 
 export default function Admin() {
-  let [user, setUser] = useState();
-  let [userList, setUserList] = useState([]);
-  let [student, setStudent] = useState([]);
+  const { user, userData } = useContext(AppContext);
+  let navigate = useNavigate();
+  let [students, setStudents] = useState([]);
 
   useEffect(() => {
-    loadUser();
-  }, []);
+    if (userData) {
+      if (userData.isAdmin) {
+        loadStudents();
+      } else {
+        navigate(`/`);
+      }
+    }
+  }, [user, userData]);
 
-  async function loadUser() {
+  async function loadStudents() {
     let ref = collection(fstore, "user_data");
     let q = query(ref, where("isActive", "==", true));
     let { docs } = await getDocs(q);
-
-    docs.forEach((d) => {
-      if (d.id === auth.currentUser?.uid) {
-        setUser(d);
-      }
-    });
-    setUserList(docs);
+    setStudents(docs);
   }
 
-  async function loadStudent(id) {
-    let snapshot = await getDoc(doc(fstore, "usaco-results", id));
-    //console.log(snapshot.data().questions[0].qId);
-    setStudent(snapshot.data().questions);
+  function setStudent(stdId) {
+    navigate("/?id=" + stdId);
   }
 
   return (
-    <div>
-      {user?.data().isAdmin && (
-        <div>
-          {userList.map((u) => (
-            <div key={u.id}>
-              <button onClick={() => loadStudent(u.id)}>{u.data().name}</button>
-            </div>
-          ))}
-        </div>
-      )}
-      <hr />
+    <div className="flex flex-col p-10">
+      <h1 className="text-lg font-bold">{"Admin Page"}</h1>
+      <div>Student List:</div>
+      <div className="flex py-1 w-full justify-between">
+        <button>Name</button>
+        <button>Created Date</button>
+      </div>
+      <div>
+        {students.map((s) => (
+          <button
+            key={s.id}
+            className="flex py-1 hover:bg-gray-200 w-full justify-between px-1"
+            onClick={() => setStudent(s.id)}
+          >
+            <div>{s.data().name}</div>
+            <div>{format(s.data().createDate.toDate(), "MM/dd/yyyy")}</div>
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

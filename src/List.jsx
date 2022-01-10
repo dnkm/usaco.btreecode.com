@@ -8,6 +8,7 @@ import {
   query,
   updateDoc,
   where,
+  orderBy,
 } from "firebase/firestore";
 import { useContext, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -19,10 +20,14 @@ import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/theme-monokai";
-import { format } from "date-fns";
+import { format, sub } from "date-fns";
 import QUESTIONS from "./data/questions.json";
 import CodeSubmission from "./CodeSubmission";
 import Button from "./components/Button";
+import CompletedTable from "./components/CompletedTable";
+import AdminTable from "./components/AdminTable";
+import Tr from "./components/Tr";
+import ToDoTable from "./components/ToDoTable";
 
 function levelToNum(level) {
   switch (level) {
@@ -47,15 +52,16 @@ export default function List() {
   let [qId, setQId] = useState(undefined);
   let [code, setCode] = useState(`//paste your code here`);
   let [studentId, setStudentId] = useState(undefined);
-  let [studentList, setStudentList] = useState([]);
+  let [student, setStudent] = useState(undefined);
 
   useEffect(() => {
-    if (userData?.isAdmin) {
-      loadStudentList();
+    if (userData?.isAdmin && params.get("id")) {
+      setStudentId(params.get("id"));
+      loadStudent(params.get("id"));
     } else if (user) {
       setStudentId(user.uid);
     }
-  }, [userData, user]);
+  }, [userData, user, params]);
 
   useEffect(() => {
     if (studentId) {
@@ -81,11 +87,9 @@ export default function List() {
     });
   }, [qId]);
 
-  async function loadStudentList() {
-    let ref = collection(fstore, "user_data");
-    let q = query(ref, where("isActive", "==", true));
-    let { docs } = await getDocs(q);
-    setStudentList(docs);
+  async function loadStudent(id) {
+    let studentData = await getDoc(doc(fstore, "user_data", id));
+    setStudent(studentData.data());
   }
 
   async function loadSubmissions(id) {
@@ -107,12 +111,11 @@ export default function List() {
   //   navigate("/?level=" + lv);
   // }
 
+  let questions = QUESTIONS.map((v, i) => ({ ...v, id: i }));
   let sorted = useMemo(() => {
-    let ret = QUESTIONS.map((v, i) => ({ ...v, id: i }));
-
     // if (params.get("level"))
     //   ret = ret.filter((v) => v.data().level === params.get("level"));
-
+    let ret = [...questions];
     if (sortField) {
       let comp = (a, b) =>
         (a[sortField] < b[sortField] ? -1 : 1) * (sortOrder ? 1 : -1);
@@ -124,7 +127,6 @@ export default function List() {
           return (aa - bb) * (sortOrder ? 1 : -1);
         };
       }
-
       ret.sort(comp);
     }
     return ret;
@@ -188,7 +190,7 @@ export default function List() {
         </button>
       ))} */}
       {userData ? (
-        <div>
+        <div className="flex">
           <span className="mx-4">
             {(userData?.isAdmin ? "(Admin) " : "") + userData?.name}
           </span>
@@ -200,32 +202,27 @@ export default function List() {
           >
             Sign Out
           </Button>
+          <div className="flex-1"></div>
+          {userData?.isAdmin && (
+            <Link
+              className={
+                "bg-white py-1 px-2 rounded-lg drop-shadow active:drop-shadow-none mx-5"
+              }
+              to="/admin"
+            >
+              Admin Page →
+            </Link>
+          )}
         </div>
       ) : (
         <Button onClick={() => signInWithGoogle()} className={"m-3"}>
           Log In
         </Button>
       )}
-      <div>
-        {userData?.isAdmin && (
-          <div className="flex flex-wrap my-2">
-            {studentList.map((u) => (
-              <div
-                key={u.id}
-                className={
-                  "mx-3 rounded-lg px-2 bg-white drop-shadow-none  " +
-                  (u.id === studentId ? "bg-gray-200" : "hover:drop-shadow-md")
-                }
-              >
-                <button onClick={() => setStudentId(u.id)}>
-                  {u.data().name}
-                </button>
-              </div>
-            ))}
-          </div>
-        )}
-        <hr />
-      </div>
+      {userData?.isAdmin && params.get("id") && (
+        <div className="text-xl mx-4 mb-2">{student?.name + "'s List"}</div>
+      )}
+      <hr />
       {showSubmit && (
         <CodeSubmission
           close={() => setShowSubmit(false)}
@@ -236,113 +233,47 @@ export default function List() {
           qid={qId}
         />
       )}
-      <table border="1">
-        <thead>
-          <tr>
-            {(auth.currentUser
-              ? "id,completed,site,level,name,difficulty,submission/date"
-              : "id,site,level,name,difficulty"
-            )
-              .split(",")
-              .map((v, i) => (
-                <th
-                  key={i}
-                  onClick={() => sortBy(v)}
-                  style={{
-                    textTransform: "capitalize",
-                    color: sortField === v ? "#c00c00" : "black",
-                    cursor: "pointer",
-                  }}
-                >
-                  {v.replace("_", " ")}{" "}
-                  {(() => {
-                    if (sortField === v) {
-                      if (sortOrder) return "↑";
-                      else return "↓";
-                    }
-                  })()}
-                </th>
-              ))}
-          </tr>
-        </thead>
-        <tbody>
-          {sorted.map((q) => (
-            <Tr
-              key={q.id}
-              q={q}
-              submit={() => {
-                setShowSubmit(true);
-                setQId(q.id);
-              }}
-              i={q.id}
+      {userData && (
+        <div>
+          <CompletedTable
+            setShowSubmit={setShowSubmit}
+            questions={questions}
+            setQId={setQId}
+            submissions={submissions}
+            updateSubmission={updateSubmission}
+            qId={qId}
+            Tr={Tr}
+          />
+          {userData?.isAdmin && params.get("id") ? (
+            <div>
+              <AdminTable
+                setShowSubmit={setShowSubmit}
+                setQId={setQId}
+                submissions={submissions}
+                updateSubmission={updateSubmission}
+                qId={qId}
+                Tr={Tr}
+                sortBy={sortBy}
+                sortOrder={sortOrder}
+                sortField={sortField}
+                sorted={sorted}
+                userData={userData}
+              />
+            </div>
+          ) : (
+            //ToDo List
+            <ToDoTable
+              setShowSubmit={setShowSubmit}
+              questions={questions}
+              setQId={setQId}
               submissions={submissions}
               updateSubmission={updateSubmission}
-              isSelected={qId === q.id}
+              qId={qId}
+              Tr={Tr}
             />
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-function Tr({ q, submit, submissions, i, updateSubmission, isSelected }) {
-  const { level, name, site, difficulty } = q;
-  const { userData, user } = useContext(AppContext);
-
-  const submission = submissions?.find((v) => v.qid === i);
-
-  function displayComplete() {
-    let subdate =
-      submission &&
-      submission.date &&
-      format(submission.date.toDate(), "MM-dd");
-
-    return `${submission.date ? "✅" : ""}${submission.lh ? "💙" : ""}${
-      submission.ih ? "💜" : ""
-    }${submission?.date ? subdate : ""}`;
-  }
-
-  return (
-    <tr
-      style={{
-        backgroundColor: isSelected ? "pink" : "white",
-      }}
-    >
-      <td className="flex justify-center">{i}</td>
-      {userData && <td>{submission && displayComplete()}</td>}
-      <td className="flex justify-center">{site}</td>
-      <td>{level}</td>
-      <td>{name}</td>
-      <td className="flex justify-center">{difficulty}</td>
-      {userData && (
-        <td>
-          {submission && submission.date ? (
-            <Button onClick={() => submit()}>View Code</Button>
-          ) : (
-            <Button onClick={() => submit()}>submit</Button>
           )}
-        </td>
+        </div>
       )}
-      {userData?.isAdmin && (
-        <td>
-          <Button onClick={() => updateSubmission(user.uid, i, { lh: true })}>
-            LH
-          </Button>
-        </td>
-      )}
-      {userData?.isAdmin && (
-        <td>
-          <Button
-            onClick={() =>
-              //console.log(question?.date.toDate !== undefined ?  "defined" : "undefined")
-              updateSubmission(user.uid, i, { ih: true })
-            }
-          >
-            IH
-          </Button>
-        </td>
-      )}
-    </tr>
+    </div>
   );
 }

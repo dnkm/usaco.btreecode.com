@@ -22,7 +22,8 @@ export default function App() {
         const initUserData = {
           name: auth.currentUser?.displayName,
           isActive: true,
-          isAdmin: false
+          isAdmin: false,
+          createDate: new Date(),
         };
 
         if (d.exists()) {
@@ -42,7 +43,7 @@ export default function App() {
     <AppContext.Provider
       value={{
         user,
-        userData
+        userData,
       }}
     >
       <BrowserRouter>
