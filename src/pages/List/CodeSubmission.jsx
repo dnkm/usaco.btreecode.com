@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AceEditor from "react-ace";
-import Button from "./components/Button";
+import Button from "../../components/Button";
 
 export default function CodeSubmission({
   close,

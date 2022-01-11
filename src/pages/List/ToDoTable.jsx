@@ -1,6 +1,6 @@
-import { auth } from "../fire";
+import { auth } from "../../util/fire";
 
-export default function CompletedTable({
+export default function ToDoTable({
   setShowSubmit,
   questions,
   setQId,
@@ -11,28 +11,26 @@ export default function CompletedTable({
 }) {
   return (
     <div>
-      <div>Completed</div>
-      <table border="1" className="table-fixed">
+      <div>Assigned Problems</div>
+      <table border="1">
         <thead>
           <tr>
-            {"id,completed,site,level,name,difficulty,submission,date"
-              .split(",")
-              .map((v, i) => (
-                <th
-                  key={i}
-                  style={{
-                    textTransform: "capitalize",
-                  }}
-                  className="px-4 "
-                >
-                  {v.replace("_", " ")}{" "}
-                </th>
-              ))}
+            {"id,site,level,name,difficulty,due date".split(",").map((v, i) => (
+              <th
+                key={i}
+                style={{
+                  textTransform: "capitalize",
+                }}
+                className="px-4"
+              >
+                {v.replace("_", " ")}{" "}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody>
           {submissions
-            .filter((s) => s.date)
+            .filter((s) => !s.date)
             .map((sub) => questions[sub.qid])
             .map((q) => (
               <Tr
@@ -45,7 +43,7 @@ export default function CompletedTable({
                 submissions={submissions}
                 updateSubmission={updateSubmission}
                 isSelected={qId === q.id}
-                isCompleted={true}
+                isAssigned={true}
               />
             ))}
         </tbody>

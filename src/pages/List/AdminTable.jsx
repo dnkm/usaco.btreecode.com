@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { auth } from "../fire";
+import { auth } from "../../util/fire";
 
 export default function AdminTable({
   setShowSubmit,

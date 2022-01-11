@@ -1,7 +1,7 @@
 import { format } from "date-fns";
 import { useContext, useState } from "react";
-import AppContext from "../context";
-import Button from "./Button";
+import AppContext from "../../util/context";
+import Button from "../../components/Button";
 
 export default function Tr({
   q,
@@ -38,13 +38,13 @@ export default function Tr({
   }
 
   return (
-    <tr>
+    <tr className="hover:bg-yellow-100">
       {isAdmin && (
         <>
           {submission ? (
-            <>{submission?.date ? "Completed" : "Assigned"}</>
+            <td>{submission?.date ? "Completed" : "Assigned"}</td>
           ) : (
-            <td className="text-xs cursor-pointer relative">
+            <td className="text-xs relative">
               {showDate && (
                 <div className="absolute rounded-lg bg-white drop-shadow z-10 mt-7">
                   <form onSubmit={assign} className="flex flex-col">

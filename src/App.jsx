@@ -2,11 +2,11 @@ import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Admin from "./Admin";
-import AppContext from "./context";
-import { auth, fstore } from "./fire";
-import List from "./List";
-import Update from "./Update";
+import Admin from "./pages/Admin";
+import AppContext from "./util/context";
+import { auth, fstore } from "./util/fire";
+import List from "./pages/List/Index";
+import Update from "./used/Update";
 
 export default function App() {
   let [user, setUser] = useState(undefined);

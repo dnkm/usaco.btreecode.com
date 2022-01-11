@@ -1,5 +1,5 @@
 import { addDoc, collection } from "firebase/firestore";
-import { fstore } from "./fire";
+import { fstore } from "../util/fire";
 import "./styles.css";
 
 let text = `usaco,2014 December,bronze1,Marathon,
@@ -385,7 +385,7 @@ export default function Add() {
           site: t[0],
           name: t[1],
           link: t[2],
-          date: new Date()
+          date: new Date(),
         };
         ar.push(addDoc(collection(fstore, "usaco_questions"), obj));
       });
@@ -410,7 +410,7 @@ export default function Add() {
           sub_cat: t[2],
           name: t[1] + " " + t[3],
           level: t[2].substr(0, t[2].length - 1),
-          date: new Date()
+          date: new Date(),
         };
         ar.push(addDoc(collection(fstore, "usaco_questions"), obj));
       });

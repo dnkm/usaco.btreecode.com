@@ -12,8 +12,8 @@ import {
 } from "firebase/firestore";
 import { useContext, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import AppContext from "./context";
-import { auth, fstore } from "./fire";
+import AppContext from "../../util/context";
+import { auth, fstore } from "../../util/fire";
 import AceEditor from "react-ace";
 
 import "ace-builds/src-noconflict/mode-java";
@@ -21,13 +21,13 @@ import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/theme-monokai";
 import { format, sub } from "date-fns";
-import QUESTIONS from "./data/questions.json";
+import QUESTIONS from "../../data/questions.json";
 import CodeSubmission from "./CodeSubmission";
-import Button from "./components/Button";
-import CompletedTable from "./components/CompletedTable";
-import AdminTable from "./components/AdminTable";
-import Tr from "./components/Tr";
-import ToDoTable from "./components/ToDoTable";
+import Button from "../../components/Button";
+import CompletedTable from "./CompletedTable";
+import AdminTable from "./AdminTable";
+import Tr from "./Tr";
+import ToDoTable from "./ToDoTable";
 
 function levelToNum(level) {
   switch (level) {
@@ -144,6 +144,7 @@ export default function List() {
       // update existing
       if (data.date && d2.data().date) {
         alert("You have already submitted this");
+        window.location.reload();
         return;
       } else {
         if (doSubmitCode) submitCode(uid, qid);
