@@ -51,8 +51,7 @@ export default function Tr({
                     <input className="" type="date" name="dueDate" />
                     <Button
                       onClick={() => {
-                        setDisable(false);
-                        setShowDate(false);
+                        setDisable(true);
                       }}
                       disable={disable}
                     >

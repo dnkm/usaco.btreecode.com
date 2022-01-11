@@ -244,6 +244,7 @@ export default function List() {
             qId={qId}
             Tr={Tr}
           />
+          <hr className="my-3" />
           {userData?.isAdmin && params.get("id") ? (
             <div>
               <AdminTable
