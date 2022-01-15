@@ -71,7 +71,6 @@ export default function List() {
 
   useEffect(() => {
     if (!qId) return;
-    // if (!studentId) return;
 
     getDocs(
       query(
@@ -140,6 +139,7 @@ export default function List() {
     if (docs.length >= 1) {
       let d2 = docs[0];
       let d = doc(fstore, "usaco-submissions", d2.id);
+      console.log("document found");
 
       // update existing
       if (data.date && d2.data().date) {

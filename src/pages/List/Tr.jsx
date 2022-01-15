@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import { useContext, useState } from "react";
 import AppContext from "../../util/context";
 import Button from "../../components/Button";
+import { useSearchParams } from "react-router-dom";
 
 export default function Tr({
   q,
@@ -15,6 +16,7 @@ export default function Tr({
 }) {
   const { level, name, site, difficulty } = q;
   const { userData, user } = useContext(AppContext);
+  const [params] = useSearchParams();
 
   const submission = submissions?.find((v) => v.qid === q.id);
   let [disable, setDisable] = useState(true);
@@ -28,12 +30,18 @@ export default function Tr({
 
   function assign(ev) {
     ev.preventDefault();
-    if (ev.target.dueDate.value === "") {
-      let date = new Date();
-      date = date.setDate(date.getDate() + 7);
-      updateSubmission(user.uid, q.id, { dueDate: format(date, "yyyy-MM-dd") });
-    } else {
-      updateSubmission(user.uid, q.id, { dueDate: ev.target.dueDate.value });
+    if (params.get("id")) {
+      if (ev.target.dueDate.value === "") {
+        let date = new Date();
+        date = date.setDate(date.getDate() + 7);
+        updateSubmission(params.get("id"), q.id, {
+          dueDate: format(date, "yyyy-MM-dd"),
+        });
+      } else {
+        updateSubmission(params.get("id"), q.id, {
+          dueDate: ev.target.dueDate.value,
+        });
+      }
     }
   }
 
@@ -98,21 +106,23 @@ export default function Tr({
           {format(submission.date.toDate(), "MM-dd")}
         </td>
       )}
-      {isAdmin && (
+      {isAdmin && params.get("id") && (
         <td>
           <Button
-            onClick={() => updateSubmission(user.uid, q.id, { lh: true })}
+            onClick={() =>
+              updateSubmission(params.get("id"), q.id, { lh: true })
+            }
           >
             LH
           </Button>
         </td>
       )}
-      {isAdmin && (
+      {isAdmin && params.get("id") && (
         <td>
           <Button
             onClick={() =>
               //console.log(question?.date.toDate !== undefined ?  "defined" : "undefined")
-              updateSubmission(user.uid, q.id, { ih: true })
+              updateSubmission(params.get("id"), q.id, { ih: true })
             }
           >
             IH
