@@ -7,14 +7,15 @@ import AppContext from "./util/context";
 import { auth, fstore } from "./util/fire";
 import List from "./pages/List/Index";
 import Update from "./used/Update";
+import TopNav from "./components/TopNav";
 
 export default function App() {
   let [user, setUser] = useState(undefined);
+  let [userLoaded, setUserLoaded] = useState(false);
   let [userData, setUserData] = useState(undefined);
 
   useEffect(() => {
     let unsub = onAuthStateChanged(auth, async (user) => {
-      console.log("user", user);
       if (user) {
         let userDataRef = doc(fstore, "user_data", user.uid);
         let d = await getDoc(userDataRef);
@@ -34,10 +35,13 @@ export default function App() {
         }
       }
       setUser(user);
+      setUserLoaded(true);
     });
 
     return () => unsub();
   }, []);
+
+  if (!userLoaded) return <div>Loading session data... </div>;
 
   return (
     <AppContext.Provider
@@ -47,10 +51,17 @@ export default function App() {
       }}
     >
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<List />} />
-          <Route path="/admin" element={<Admin />} />
-        </Routes>
+        <div>
+          <TopNav />
+          {user ? (
+            <Routes>
+              <Route path="/" element={<List />} />
+              <Route path="/admin" element={<Admin />} />
+            </Routes>
+          ) : (
+            <div>Please login</div>
+          )}
+        </div>
       </BrowserRouter>
     </AppContext.Provider>
   );

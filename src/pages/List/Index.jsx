@@ -54,20 +54,20 @@ export default function List() {
   let [studentId, setStudentId] = useState(undefined);
   let [student, setStudent] = useState(undefined);
 
-  useEffect(() => {
-    if (userData?.isAdmin && params.get("id")) {
-      setStudentId(params.get("id"));
-      loadStudent(params.get("id"));
-    } else if (user) {
-      setStudentId(user.uid);
-    }
-  }, [userData, user, params]);
+  console.log("student", student);
 
   useEffect(() => {
-    if (studentId) {
-      loadSubmissions(studentId);
+    if (!user || !userData) return;
+    if (userData.isAdmin && params.get("id")) {
+      setStudentId(params.get("id"));
+      loadStudent(params.get("id"));
+      loadSubmissions(params.get("id"));
+    } else {
+      setStudentId(user.uid);
+      loadStudent(user.uid);
+      loadSubmissions(user.uid);
     }
-  }, [studentId]);
+  }, [user, userData, params]);
 
   useEffect(() => {
     if (!qId) return;
@@ -185,41 +185,6 @@ export default function List() {
 
   return (
     <div>
-      {/* {"bronze,silver,gold".split(",").map((lv) => (
-        <button key={lv} onClick={() => setLevel(lv)}>
-          {lv}
-        </button>
-      ))} */}
-      {userData ? (
-        <div className="flex">
-          <span className="mx-4">
-            {(userData?.isAdmin ? "(Admin) " : "") + userData?.name}
-          </span>
-          <Button
-            onClick={() => {
-              window.location.reload(false);
-              signOut(auth);
-            }}
-          >
-            Sign Out
-          </Button>
-          <div className="flex-1"></div>
-          {userData?.isAdmin && (
-            <Link
-              className={
-                "bg-white py-1 px-2 rounded-lg drop-shadow active:drop-shadow-none mx-5"
-              }
-              to="/admin"
-            >
-              Admin Page →
-            </Link>
-          )}
-        </div>
-      ) : (
-        <Button onClick={() => signInWithGoogle()} className={"m-3"}>
-          Log In
-        </Button>
-      )}
       {userData?.isAdmin && params.get("id") && (
         <div className="text-xl mx-4 mb-2">{student?.name + "'s List"}</div>
       )}
@@ -271,9 +236,10 @@ export default function List() {
               submissions={submissions}
               updateSubmission={updateSubmission}
               qId={qId}
-              Tr={Tr}
             />
           )}
+
+          {console.log("submissions", submissions)}
         </div>
       )}
     </div>

@@ -1,4 +1,5 @@
 import { auth } from "../../util/fire";
+import Tr from "./Tr";
 
 export default function ToDoTable({
   setShowSubmit,
@@ -7,7 +8,6 @@ export default function ToDoTable({
   submissions,
   updateSubmission,
   qId,
-  Tr,
 }) {
   return (
     <div>
