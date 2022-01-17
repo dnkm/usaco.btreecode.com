@@ -54,8 +54,6 @@ export default function List() {
   let [studentId, setStudentId] = useState(undefined);
   let [student, setStudent] = useState(undefined);
 
-  console.log("student", student);
-
   useEffect(() => {
     if (!user || !userData) return;
     if (userData.isAdmin && params.get("id")) {
@@ -106,11 +104,10 @@ export default function List() {
     }
   }
 
-  // function setLevel(lv) {
-  //   navigate("/?level=" + lv);
-  // }
+  let questions = useMemo(() => {
+    return QUESTIONS.map((v, i) => ({ ...v, id: i }));
+  }, []);
 
-  let questions = QUESTIONS.map((v, i) => ({ ...v, id: i }));
   let sorted = useMemo(() => {
     // if (params.get("level"))
     //   ret = ret.filter((v) => v.data().level === params.get("level"));
@@ -171,21 +168,9 @@ export default function List() {
     setCode(`//paste your code here`);
   }
 
-  function signInWithGoogle() {
-    if (auth.currentUser !== null) {
-      return;
-    }
-    signInWithPopup(auth, new GoogleAuthProvider())
-      .then()
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
-  }
-
   return (
-    <div>
-      {userData?.isAdmin && params.get("id") && (
+    <div className="container mx-auto my-5">
+      {userData?.isAdmin && (
         <div className="text-xl mx-4 mb-2">{student?.name + "'s List"}</div>
       )}
       <hr />
@@ -199,36 +184,9 @@ export default function List() {
           qid={qId}
         />
       )}
-      {userData && (
-        <div>
-          <CompletedTable
-            setShowSubmit={setShowSubmit}
-            questions={questions}
-            setQId={setQId}
-            submissions={submissions}
-            updateSubmission={updateSubmission}
-            qId={qId}
-            Tr={Tr}
-          />
-          <hr className="my-3" />
-          {userData?.isAdmin && params.get("id") ? (
-            <div>
-              <AdminTable
-                setShowSubmit={setShowSubmit}
-                setQId={setQId}
-                submissions={submissions}
-                updateSubmission={updateSubmission}
-                qId={qId}
-                Tr={Tr}
-                sortBy={sortBy}
-                sortOrder={sortOrder}
-                sortField={sortField}
-                sorted={sorted}
-                userData={userData}
-              />
-            </div>
-          ) : (
-            //ToDo List
+      {studentId && (
+        <div className="space-y-10">
+          <Collapseable className="text-lg font-bold" header="Todo">
             <ToDoTable
               setShowSubmit={setShowSubmit}
               questions={questions}
@@ -237,11 +195,56 @@ export default function List() {
               updateSubmission={updateSubmission}
               qId={qId}
             />
-          )}
+          </Collapseable>
 
-          {console.log("submissions", submissions)}
+          <Collapseable className="text-lg font-bold" header="Completed">
+            <CompletedTable
+              setShowSubmit={setShowSubmit}
+              questions={questions}
+              setQId={setQId}
+              submissions={submissions}
+              updateSubmission={updateSubmission}
+              qId={qId}
+              Tr={Tr}
+            />
+          </Collapseable>
+
+          {userData?.isAdmin && (
+            <>
+              <Collapseable className="text-lg font-bold" header="Admin List" defaultCollapsed>
+                <AdminTable
+                  setShowSubmit={setShowSubmit}
+                  setQId={setQId}
+                  submissions={submissions}
+                  updateSubmission={updateSubmission}
+                  qId={qId}
+                  Tr={Tr}
+                  sortBy={sortBy}
+                  sortOrder={sortOrder}
+                  sortField={sortField}
+                  sorted={sorted}
+                  userData={userData}
+                />
+              </Collapseable>
+            </>
+          )}
         </div>
       )}
+    </div>
+  );
+}
+
+function Collapseable({ header, children, defaultCollapsed = false }) {
+  let [collapsed, setC] = useState(defaultCollapsed);
+  return (
+    <div>
+      <h1 className="px-2 py-1 bg-gray-700 text-white text-lg font-bold flex justify-between ">
+        {header}
+        <div className="cursor-pointer text-sm" onClick={() => setC((v) => !v)}>
+          {collapsed ? "show" : "hide"}
+        </div>
+      </h1>
+      <div className={`${collapsed ? "hidden" : "block"}`}>{children}</div>
     </div>
   );
 }

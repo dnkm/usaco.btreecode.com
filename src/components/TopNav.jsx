@@ -37,6 +37,7 @@ function UserMenu({ user, userData }) {
   return (
     <div>
       {userData?.isAdmin && <AdminMenu />}
+      <strong className="mr-5 text-yellow-400">{userData.name}</strong>
       <Button onClick={doSignout}>Log Out</Button>
     </div>
   );
