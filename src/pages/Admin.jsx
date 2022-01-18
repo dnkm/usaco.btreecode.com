@@ -1,18 +1,9 @@
 import { format } from "date-fns";
-import {
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  loadBundle,
-  query,
-  where,
-} from "firebase/firestore";
-import { useContext, useEffect, useMemo, useState } from "react";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AppContext from "../util/context";
-import { auth, fstore } from "../util/fire";
-import List from "./List/Index";
+import { fstore } from "../util/fire";
 
 export default function Admin() {
   const { user, userData } = useContext(AppContext);

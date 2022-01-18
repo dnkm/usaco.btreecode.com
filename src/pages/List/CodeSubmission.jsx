@@ -4,6 +4,11 @@ import AceEditor from "react-ace";
 import Button from "../../components/Button";
 import { fstore } from "../../util/fire";
 
+import "ace-builds/src-noconflict/mode-java";
+import "ace-builds/src-noconflict/mode-python";
+import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/theme-monokai";
+
 export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
   let [type, setType] = useState("java");
   let [code, setCode] = useState(`Checking your previous submission....`);

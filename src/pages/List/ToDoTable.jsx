@@ -1,4 +1,3 @@
-import { auth } from "../../util/fire";
 import Tr from "./Tr";
 
 export default function ToDoTable({
