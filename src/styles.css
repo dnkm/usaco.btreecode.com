@@ -10,3 +10,24 @@
 .sortField {
   color: #c00c00;
 }
+
+.table-1 {
+  border-collapse: collapse;
+  @apply w-full;
+}
+
+.table-1 td, 
+.table-1 th {
+  @apply p-2 border;
+}
+
+.table-1 th {
+  @apply bg-gray-300 font-bold;
+}
+.table-1 tr:nth-child(2n) {
+  @apply bg-gray-100;
+}
+
+.table-1 tr:hover {
+  @apply bg-yellow-50;
+}

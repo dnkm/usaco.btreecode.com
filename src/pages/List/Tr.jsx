@@ -34,19 +34,27 @@ export default function Tr({
       if (ev.target.dueDate.value === "") {
         let date = new Date();
         date = date.setDate(date.getDate() + 7);
-        updateSubmission(params.get("id"), q.id, {
-          dueDate: format(date, "yyyy-MM-dd"),
+        updateSubmission({
+          uid: params.get("id"),
+          qid: q.id,
+          data: {
+            dueDate: format(date, "yyyy-MM-dd"),
+          },
         });
       } else {
-        updateSubmission(params.get("id"), q.id, {
-          dueDate: ev.target.dueDate.value,
+        updateSubmission({
+          uid: params.get("id"),
+          qid: q.id,
+          data: {
+            dueDate: ev.target.dueDate.value,
+          },
         });
       }
     }
   }
 
   return (
-    <tr className="hover:bg-yellow-100">
+    <tr>
       {isAdmin && (
         <>
           {submission ? (
@@ -110,7 +118,13 @@ export default function Tr({
         <td>
           <Button
             onClick={() =>
-              updateSubmission(params.get("id"), q.id, { lh: true })
+              updateSubmission({
+                uid: params.get("id"),
+                qid: q.id,
+                data: {
+                  lh: true,
+                },
+              })
             }
           >
             LH
@@ -122,7 +136,13 @@ export default function Tr({
           <Button
             onClick={() =>
               //console.log(question?.date.toDate !== undefined ?  "defined" : "undefined")
-              updateSubmission(params.get("id"), q.id, { ih: true })
+              updateSubmission({
+                uid: params.get("id"),
+                qid: q.id,
+                data: {
+                  ih: true,
+                },
+              })
             }
           >
             IH

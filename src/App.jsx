@@ -8,6 +8,7 @@ import { auth, fstore } from "./util/fire";
 import List from "./pages/List/Index";
 import Update from "./used/Update";
 import TopNav from "./components/TopNav";
+import "./styles.css";
 
 export default function App() {
   let [user, setUser] = useState(undefined);

@@ -50,7 +50,6 @@ export default function List() {
   let [showSubmit, setShowSubmit] = useState(false);
   let [submissions, setSubmissions] = useState([]);
   let [qId, setQId] = useState(undefined);
-  let [code, setCode] = useState(`//paste your code here`);
   let [studentId, setStudentId] = useState(undefined);
   let [student, setStudent] = useState(undefined);
 
@@ -66,23 +65,6 @@ export default function List() {
       loadSubmissions(user.uid);
     }
   }, [user, userData, params]);
-
-  useEffect(() => {
-    if (!qId) return;
-
-    getDocs(
-      query(
-        collection(fstore, "usaco-codes"),
-        where(`uid`, "==", user.uid),
-        where(`qid`, "==", qId)
-      )
-    ).then((snapshot) => {
-      let docs = snapshot.docs;
-      console.log("fetching code", docs.length);
-      if (docs.length === 0) setCode(`//paste your code here`);
-      else setCode(docs[0].data().code);
-    });
-  }, [qId]);
 
   async function loadStudent(id) {
     let studentData = await getDoc(doc(fstore, "user_data", id));
@@ -128,8 +110,7 @@ export default function List() {
     return ret;
   }, [sortField, sortOrder, params]);
 
-  async function updateSubmission(uid, qid, data, doSubmitCode = false) {
-    console.log("doSubmitCode", doSubmitCode);
+  async function updateSubmission({ uid, qid, data, code }) {
     let c = collection(fstore, "usaco-submissions");
     let q = query(c, where("uid", "==", uid), where("qid", "==", qid));
     let { docs } = await getDocs(q);
@@ -144,28 +125,34 @@ export default function List() {
         window.location.reload();
         return;
       } else {
-        if (doSubmitCode) submitCode(uid, qid);
-        updateDoc(d, data);
+        if (code) submitCode(uid, qid, code);
+        await updateDoc(d, data);
+        let newP = await getDoc(d);
+
+        setSubmissions((submissions) =>
+          submissions.map((p) =>
+            p.uid === uid && p.qid === qid ? newP.data() : p
+          )
+        );
       }
     } else {
       // create a new
-      if (doSubmitCode) submitCode(uid, qid);
+      if (code) submitCode(uid, qid, code);
       let { id } = await addDoc(c, { uid, qid, ...data });
       let newDoc = await getDoc(doc(c, id));
       setSubmissions((p) => [...p, newDoc.data()]);
     }
   }
 
-  async function submitCode(uid, qid) {
+  async function submitCode(uid, qid, code) {
     // code submissions
     let entry = {
       uid,
       qid,
-      code: code,
+      code,
     };
     addDoc(collection(fstore, "usaco-codes"), entry);
     setShowSubmit(false);
-    setCode(`//paste your code here`);
   }
 
   return (
@@ -177,8 +164,6 @@ export default function List() {
       {showSubmit && (
         <CodeSubmission
           close={() => setShowSubmit(false)}
-          code={code}
-          setCode={setCode}
           updateSubmission={updateSubmission}
           uid={user.uid}
           qid={qId}
@@ -211,7 +196,11 @@ export default function List() {
 
           {userData?.isAdmin && (
             <>
-              <Collapseable className="text-lg font-bold" header="Admin List" defaultCollapsed>
+              <Collapseable
+                className="text-lg font-bold"
+                header="Admin List"
+                defaultCollapsed
+              >
                 <AdminTable
                   setShowSubmit={setShowSubmit}
                   setQId={setQId}

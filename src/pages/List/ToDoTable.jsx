@@ -10,7 +10,7 @@ export default function ToDoTable({
   qId,
 }) {
   return (
-    <table border="1">
+    <table className="table-1">
       <thead>
         <tr>
           {"id,site,level,name,difficulty,due date".split(",").map((v, i) => (
@@ -24,6 +24,7 @@ export default function ToDoTable({
               {v.replace("_", " ")}{" "}
             </th>
           ))}
+          <th></th>
         </tr>
       </thead>
       <tbody>
