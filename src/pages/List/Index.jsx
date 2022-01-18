@@ -213,6 +213,7 @@ export default function List() {
                   sortField={sortField}
                   sorted={sorted}
                   userData={userData}
+                  questions={questions}
                 />
               </Collapseable>
             </>

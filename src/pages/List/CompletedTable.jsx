@@ -10,10 +10,10 @@ export default function CompletedTable({
   Tr,
 }) {
   return (
-    <table border="1" className="table-fixed">
+    <table border="1" className="table-1">
       <thead>
         <tr>
-          {"id,completed,site,level,name,difficulty,submission,date"
+          {"✓,help,site,level,name,difficulty,submission,date"
             .split(",")
             .map((v, i) => (
               <th

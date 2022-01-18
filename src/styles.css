@@ -18,7 +18,7 @@
 
 .table-1 td, 
 .table-1 th {
-  @apply p-2 border;
+  @apply p-2 border text-center;
 }
 
 .table-1 th {

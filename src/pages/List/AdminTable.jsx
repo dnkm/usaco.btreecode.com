@@ -8,35 +8,40 @@ export default function AdminTable({
   updateSubmission,
   qId,
   Tr,
-  sortField,
-  sortOrder,
-  sorted,
   userData,
   sortBy,
+  questions,
 }) {
+  let sorted = [...questions].map((q) => ({
+    ...q,
+    submission: submissions.find((sub) => sub.qid === q.id),
+  }));
+
+  // q (30) + assigned + code:   30 - 2000
+  // q (30) + assigned:          30 - 1000
+  // q (30) :                    30
+
+  sorted.sort((a, b) => {
+    let aPt =
+      (a.submission ? -1000 : 0) +
+      (a.submission?.date ? -1000 : 0) +
+      (a.difficulty || 999);
+    let bPt =
+      (b.submission ? -1000 : 0) +
+      (b.submission?.date ? -1000 : 0) +
+      (b.difficulty || 999);
+    return aPt - bPt;
+  });
+
+  console.log(sorted[0]);
+
   return (
     <table border="1">
       <thead>
         <tr>
           {",id,completed,site,level,name,difficulty".split(",").map((v, i) => (
-            <th
-              key={i}
-              onClick={() => sortBy(v)}
-              style={{
-                textTransform: "capitalize",
-                color: sortField === v ? "#c00c00" : "black",
-                cursor: "pointer",
-              }}
-            >
-              <div>
-                {v.replace("_", " ")}{" "}
-                {(() => {
-                  if (sortField === v) {
-                    if (sortOrder) return "↑";
-                    else return "↓";
-                  }
-                })()}
-              </div>
+            <th key={i} className="capitalize">
+              <div>{v.replace("_", " ")}</div>
             </th>
           ))}
         </tr>

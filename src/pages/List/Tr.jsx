@@ -22,12 +22,6 @@ export default function Tr({
   let [disable, setDisable] = useState(true);
   let [showDate, setShowDate] = useState(false);
 
-  function displayComplete() {
-    return `${submission.date ? "✅" : ""}${submission.lh ? "LH" : ""}${
-      submission.ih ? "IH" : ""
-    }`;
-  }
-
   function assign(ev) {
     ev.preventDefault();
     if (params.get("id")) {
@@ -81,9 +75,28 @@ export default function Tr({
           )}
         </>
       )}
-      <td className="text-center">{q.id}</td>
       {userData && !isAssigned && (
-        <td className="px-5">{submission && displayComplete()}</td>
+        <>
+          <td>
+            {submission?.date && (
+              <SmallBox classNames={`bg-green-300 text-green-700`}>✓</SmallBox>
+            )}
+          </td>
+          <td className="">
+            <div className="flex space-x-1 justify-center">
+              {submission?.lh && (
+                <SmallBox classNames={`bg-pink-300 text-pink-600`}>
+                  Logic
+                </SmallBox>
+              )}
+              {submission?.ih && (
+                <SmallBox classNames={`bg-pink-300 text-pink-600`}>
+                  Code
+                </SmallBox>
+              )}
+            </div>
+          </td>
+        </>
       )}
       <td className="text-center">{site}</td>
       <td className="text-center">{level}</td>
@@ -110,8 +123,10 @@ export default function Tr({
         </td>
       )}
       {isCompleted && (
-        <td className="flex justify-center">
-          {format(submission.date.toDate(), "MM-dd")}
+        <td>
+          <div className="flex justify-center">
+            {format(submission.date.toDate(), "MM-dd")}
+          </div>
         </td>
       )}
       {isAdmin && params.get("id") && (
@@ -150,5 +165,15 @@ export default function Tr({
         </td>
       )}
     </tr>
+  );
+}
+
+function SmallBox({ children, classNames }) {
+  return (
+    <div
+      className={`h-5 flex justify-center items-center text-sm p-0.5 ${classNames}`}
+    >
+      {children}
+    </div>
   );
 }
