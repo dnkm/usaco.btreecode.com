@@ -30,7 +30,6 @@ export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
       }
 
       setLoading(false);
-      console.log(docs[0].data());
       if (docs[0].data().code) {
         setCode(docs[0].data().code);
         setExists(true);
@@ -78,12 +77,11 @@ export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
           <AceEditor
             mode={type}
             theme="monokai"
-            //value={text}
             width={"100%"}
             height="100%"
             onChange={setCode}
             name="UNIQUE_ID_OF_DIV"
-            // editorProps={{ $blockScrolling: true }}
+            editorProps={{ $blockScrolling: true }}
             value={code}
             readOnly={loading || exists}
           />

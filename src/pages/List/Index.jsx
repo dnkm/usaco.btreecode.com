@@ -91,8 +91,6 @@ export default function List() {
   }, []);
 
   let sorted = useMemo(() => {
-    // if (params.get("level"))
-    //   ret = ret.filter((v) => v.data().level === params.get("level"));
     let ret = [...questions];
     if (sortField) {
       let comp = (a, b) =>
@@ -117,7 +115,6 @@ export default function List() {
     if (docs.length >= 1) {
       let d2 = docs[0];
       let d = doc(fstore, "usaco-submissions", d2.id);
-      console.log("document found");
 
       // update existing
       if (data.date && d2.data().date) {

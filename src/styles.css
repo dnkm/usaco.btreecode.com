@@ -16,7 +16,7 @@
   @apply w-full;
 }
 
-.table-1 td, 
+.table-1 td,
 .table-1 th {
   @apply p-2 border text-center;
 }
@@ -30,4 +30,8 @@
 
 .table-1 tr:hover {
   @apply bg-yellow-50;
+}
+
+.admin:nth-child(2n) {
+  @apply bg-gray-100;
 }

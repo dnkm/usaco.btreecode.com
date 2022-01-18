@@ -13,7 +13,7 @@ export default function ToDoTable({
     <table className="table-1">
       <thead>
         <tr>
-          {"id,site,level,name,difficulty,due date".split(",").map((v, i) => (
+          {"site,level,name,difficulty,due date".split(",").map((v, i) => (
             <th
               key={i}
               style={{

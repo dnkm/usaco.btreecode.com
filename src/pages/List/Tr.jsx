@@ -129,7 +129,7 @@ export default function Tr({
           </div>
         </td>
       )}
-      {isAdmin && params.get("id") && (
+      {isAdmin && (
         <td>
           <Button
             onClick={() =>
@@ -146,11 +146,10 @@ export default function Tr({
           </Button>
         </td>
       )}
-      {isAdmin && params.get("id") && (
+      {isAdmin && (
         <td>
           <Button
             onClick={() =>
-              //console.log(question?.date.toDate !== undefined ?  "defined" : "undefined")
               updateSubmission({
                 uid: params.get("id"),
                 qid: q.id,

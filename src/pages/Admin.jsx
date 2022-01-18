@@ -38,20 +38,27 @@ export default function Admin() {
   function setStudent(stdId) {
     navigate("/?id=" + stdId);
   }
+  function search(ev) {
+    ev.preventDefault();
+
+    ev.target.reset();
+  }
 
   return (
     <div className="flex flex-col p-10">
       <h1 className="text-lg font-bold">{"Admin Page"}</h1>
-      <div>Student List:</div>
+      <form className="flex w-full" onSubmit={search}>
+        <input type="text" className="w-full px-3" />
+      </form>
       <div className="flex py-1 w-full justify-between">
-        <button>Name</button>
+        <button>Name: </button>
         <button>Created Date</button>
       </div>
-      <div>
+      <div className="">
         {students.map((s) => (
           <button
             key={s.id}
-            className="flex py-1 hover:bg-gray-200 w-full justify-between px-1"
+            className="flex py-3 hover:bg-gray-200 w-full justify-between px-1 font-bold"
             onClick={() => setStudent(s.id)}
           >
             <div>{s.data().name}</div>

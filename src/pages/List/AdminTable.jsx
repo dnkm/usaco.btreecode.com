@@ -33,17 +33,17 @@ export default function AdminTable({
     return aPt - bPt;
   });
 
-  console.log(sorted[0]);
-
   return (
-    <table border="1">
+    <table className="table-1">
       <thead>
         <tr>
-          {",id,completed,site,level,name,difficulty".split(",").map((v, i) => (
-            <th key={i} className="capitalize">
-              <div>{v.replace("_", " ")}</div>
-            </th>
-          ))}
+          {"status,✓,help,site,level,name,difficulty,,"
+            .split(",")
+            .map((v, i) => (
+              <th key={i} className="capitalize">
+                <div>{v.replace("_", " ")}</div>
+              </th>
+            ))}
         </tr>
       </thead>
       <tbody>
