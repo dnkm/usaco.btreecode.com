@@ -8,6 +8,7 @@ export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
   let [type, setType] = useState("java");
   let [code, setCode] = useState(`Checking your previous submission....`);
   let [loading, setLoading] = useState(true);
+  let [exists, setExists] = useState(true);
 
   useEffect(() => {
     if (typeof qid === "undefined") return;
@@ -20,9 +21,22 @@ export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
       )
     ).then((snapshot) => {
       let docs = snapshot.docs;
-      if (docs.length === 0) setCode(``);
-      else setCode(docs[0].data().code);
+
+      if (docs.length === 0) {
+        setCode(``);
+        setExists(false);
+        setLoading(true);
+        return;
+      }
+
       setLoading(false);
+      console.log(docs[0].data());
+      if (docs[0].data().code) {
+        setCode(docs[0].data().code);
+        setExists(true);
+      } else {
+        setExists(false);
+      }
     });
   }, [qid]);
 
@@ -71,7 +85,7 @@ export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
             name="UNIQUE_ID_OF_DIV"
             // editorProps={{ $blockScrolling: true }}
             value={code}
-            readOnly={loading}
+            readOnly={loading || exists}
           />
         </div>
         <div className="space-x-2">
@@ -79,13 +93,19 @@ export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
             close
           </Button>
           <Button
-            bgColor="gray-700"
+            bgColor={exists ? "gray-300" : "gray-700"}
             textColor="white"
             onClick={() => {
-              updateSubmission({ uid, qid, code, data: { date: new Date() } });
+              updateSubmission({
+                uid,
+                qid,
+                code,
+                data: { date: new Date() },
+              });
             }}
+            disabled={exists}
           >
-            submit
+            {exists ? "already submitted" : "Submit"}
           </Button>
         </div>
       </div>
