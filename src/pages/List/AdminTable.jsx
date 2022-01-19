@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import { auth } from "../../util/fire";
-
 export default function AdminTable({
   setShowSubmit,
   setQId,

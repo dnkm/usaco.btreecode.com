@@ -15,7 +15,7 @@ export default function Tr({
   isAssigned,
 }) {
   const { level, name, site, difficulty } = q;
-  const { userData, user } = useContext(AppContext);
+  const { userData } = useContext(AppContext);
   const [params] = useSearchParams();
 
   const submission = submissions?.find((v) => v.qid === q.id);

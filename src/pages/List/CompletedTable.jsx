@@ -1,5 +1,3 @@
-import { auth } from "../../util/fire";
-
 export default function CompletedTable({
   setShowSubmit,
   questions,
