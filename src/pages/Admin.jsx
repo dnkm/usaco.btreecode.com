@@ -16,7 +16,7 @@ export default function Admin() {
       navigate(`/`);
     }
     loadStudents();
-  }, [user, userData]);
+  }, [user, userData, navigate]);
 
   function setStudent(stdId) {
     navigate("/?id=" + stdId);

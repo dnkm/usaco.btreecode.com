@@ -6,7 +6,6 @@ import Admin from "./pages/Admin";
 import AppContext from "./util/context";
 import { auth, fstore } from "./util/fire";
 import List from "./pages/List/Index";
-import Update from "./used/Update";
 import TopNav from "./components/TopNav";
 import "./styles.css";
 

@@ -97,7 +97,7 @@ export default function List() {
       ret.sort(comp);
     }
     return ret;
-  }, [sortField, sortOrder, params]);
+  }, [sortField, sortOrder, questions]);
 
   async function updateSubmission({ uid, qid, data, code }) {
     let c = collection(fstore, "usaco-submissions");

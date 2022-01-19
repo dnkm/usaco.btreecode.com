@@ -42,7 +42,7 @@ export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
         setExists(false);
       }
     });
-  }, [qid]);
+  }, [qid, uid]);
 
   return (
     <div
