@@ -35,10 +35,8 @@ export default function Admin() {
     setActive(
       students.filter(
         (st) =>
-          st
-            .data()
-            .name.toLowerCase()
-            .indexOf(ev.target.search.value.toLowerCase()) > -1
+          st.data().name.toLowerCase().indexOf(ev.target.value.toLowerCase()) >
+          -1
       )
     );
     ev.target.reset();
@@ -47,17 +45,15 @@ export default function Admin() {
   return (
     <div className="flex flex-col p-10">
       <h1 className="text-lg font-bold">{"Admin Page"}</h1>
-      <form className="flex w-full" onSubmit={search}>
-        <input
-          type="text"
-          name="search"
-          className="w-full px-3 border-2"
-          placeholder="search student"
-          autoComplete="off"
-          autoCapitalize="off"
-        />
-        <button>Search</button>
-      </form>
+      <input
+        type="text"
+        name="search"
+        className="w-full px-3 border-2"
+        placeholder="search student"
+        autoComplete="off"
+        autoCapitalize="off"
+        onChange={search}
+      />
       <div className="flex py-1 w-full justify-between">
         <button>Name: </button>
         <button>Created Date</button>
