@@ -108,7 +108,7 @@ export default function List() {
       let d = doc(fstore, "usaco-submissions", d2.id);
 
       // update existing
-      if (data.date && d2.data().date) {
+      if (d2.data().status !== "revoked" && data.date && d2.data().date) {
         alert("You have already submitted this");
         window.location.reload();
         return;
@@ -139,7 +139,16 @@ export default function List() {
       qid,
       code,
     };
-    addDoc(collection(fstore, "usaco-codes"), entry);
+    let c = collection(fstore, "usaco-codes");
+    let q = query(c, where("uid", "==", uid), where("qid", "==", qid));
+    let { docs } = await getDocs(q);
+    if (docs.length >= 1) {
+      let d2 = docs[0];
+      let d = doc(fstore, "usaco-codes", d2.id);
+      updateDoc(d, { code });
+    } else {
+      addDoc(collection(fstore, "usaco-codes"), entry);
+    }
     setShowSubmit(false);
   }
 
@@ -153,8 +162,9 @@ export default function List() {
         <CodeSubmission
           close={() => setShowSubmit(false)}
           updateSubmission={updateSubmission}
-          uid={user.uid}
+          uid={studentId}
           qid={qId}
+          userData={userData}
         />
       )}
       {studentId && (

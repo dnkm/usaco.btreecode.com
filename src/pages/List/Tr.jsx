@@ -33,6 +33,7 @@ export default function Tr({
           qid: q.id,
           data: {
             dueDate: format(date, "yyyy-MM-dd"),
+            status: "assigned",
           },
         });
       } else {
@@ -52,7 +53,7 @@ export default function Tr({
       {isAdmin && (
         <>
           {submission ? (
-            <td>{submission?.date ? "Completed" : "Assigned"}</td>
+            <td>{submission?.status}</td>
           ) : (
             <td className="text-xs relative">
               {showDate && (
@@ -79,7 +80,15 @@ export default function Tr({
         <>
           <td>
             {submission?.date && (
-              <SmallBox classNames={`bg-green-300 text-green-700`}>✓</SmallBox>
+              <>
+                {submission?.status !== "revoked" ? (
+                  <SmallBox classNames={`bg-green-300 text-green-700`}>
+                    ✓
+                  </SmallBox>
+                ) : (
+                  <SmallBox classNames={`bg-red-300 text-red-700`}>X</SmallBox>
+                )}
+              </>
             )}
           </td>
           <td className="">

@@ -9,7 +9,13 @@ import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/theme-monokai";
 
-export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
+export default function CodeSubmission({
+  close,
+  updateSubmission,
+  uid,
+  qid,
+  userData,
+}) {
   let [type, setType] = useState("java");
   let [code, setCode] = useState(`Checking your previous submission....`);
   let [loading, setLoading] = useState(true);
@@ -40,6 +46,23 @@ export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
         setExists(true);
       } else {
         setExists(false);
+      }
+    });
+
+    getDocs(
+      query(
+        collection(fstore, "usaco-submissions"),
+        where(`uid`, "==", uid),
+        where(`qid`, "==", qid)
+      )
+    ).then((snapshot) => {
+      let docs = snapshot.docs;
+
+      if (docs.length >= 1) {
+        setLoading(false);
+        if (docs[0].data().status === "revoked") {
+          setExists(false);
+        }
       }
     });
   }, [qid, uid]);
@@ -91,7 +114,7 @@ export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
             readOnly={loading || exists}
           />
         </div>
-        <div className="space-x-2">
+        <div className="space-x-2 flex">
           <Button onClick={close} bgColor="gray-700" textColor="white">
             close
           </Button>
@@ -103,13 +126,46 @@ export default function CodeSubmission({ close, updateSubmission, uid, qid }) {
                 uid,
                 qid,
                 code,
-                data: { date: new Date() },
+                data: { date: new Date(), status: "submitted" },
               });
             }}
             disabled={exists}
           >
             {exists ? "already submitted" : "Submit"}
           </Button>
+          <div className="flex-1"></div>
+          {userData.isAdmin && exists && !loading && (
+            <>
+              <Button
+                bgColor="gray-700"
+                textColor="white"
+                onClick={() => {
+                  updateSubmission({
+                    uid,
+                    qid,
+                    code,
+                    data: { status: "approved" },
+                  });
+                }}
+              >
+                Approve
+              </Button>
+              <Button
+                bgColor="gray-700"
+                textColor="white"
+                onClick={() => {
+                  updateSubmission({
+                    uid,
+                    qid,
+                    code,
+                    data: { status: "revoked" },
+                  });
+                }}
+              >
+                Revoke
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </div>
