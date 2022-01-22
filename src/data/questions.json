@@ -2338,10 +2338,10 @@
     "sub_cat": "bronze2"
   },
   {
-    "name": "2015 February COW",
+    "name": "+2015 February COW",
     "sub_cat": "bronze2",
     "level": "bronze",
-    "difficulty": 4,
+    "difficulty": 8,
     "site": "usaco"
   },
   {

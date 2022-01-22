@@ -42,6 +42,7 @@ export default function Tr({
           qid: q.id,
           data: {
             dueDate: ev.target.dueDate.value,
+            status: "assigned",
           },
         });
       }
