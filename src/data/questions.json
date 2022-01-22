@@ -11,7 +11,7 @@
     "site": "usaco",
     "sub_cat": "bronze2",
     "difficulty": 4,
-    "name": "2020 December Daisy Chains"
+    "name": "+2020 December Daisy Chains"
   },
   {
     "site": "usaco",
@@ -52,8 +52,8 @@
     "level": "bronze",
     "sub_cat": "bronze2",
     "site": "usaco",
-    "difficulty": 4,
-    "name": "2019 December Where Am I?"
+    "difficulty": 5,
+    "name": "+2019 December Where Am I?"
   },
   {
     "level": "bronze",
@@ -92,10 +92,10 @@
   },
   {
     "sub_cat": "bronze1",
-    "name": "2019 December Cow Gymnastics",
+    "name": "+2019 December Cow Gymnastics",
     "level": "bronze",
     "site": "usaco",
-    "difficulty": 1
+    "difficulty": 3
   },
   {
     "site": "usaco",
@@ -217,7 +217,7 @@
   },
   {
     "name": "2019 January Shell Game",
-    "difficulty": 1,
+    "difficulty": 2,
     "sub_cat": "bronze1",
     "level": "bronze",
     "site": "usaco"
@@ -282,11 +282,11 @@
     "site": "usaco"
   },
   {
-    "difficulty": 1,
+    "difficulty": 4,
     "level": "bronze",
     "site": "usaco",
     "sub_cat": "bronze1",
-    "name": "2020 January Word Processor"
+    "name": "+2020 January Word Processor"
   },
   {
     "level": "silver",
@@ -318,9 +318,9 @@
   },
   {
     "site": "usaco",
-    "difficulty": 4,
+    "difficulty": 7,
     "level": "bronze",
-    "name": "2019 January Sleepy Cow Sorting",
+    "name": "+2019 January Sleepy Cow Sorting",
     "sub_cat": "bronze2"
   },
   {
@@ -532,11 +532,11 @@
     "site": "usaco"
   },
   {
-    "name": "2020 Open Social Distancing I",
+    "name": "+2020 Open Social Distancing I",
     "level": "bronze",
     "site": "usaco",
     "sub_cat": "bronze1",
-    "difficulty": 1
+    "difficulty": 4
   },
   {
     "level": "silver",
@@ -562,8 +562,8 @@
   {
     "site": "usaco",
     "level": "bronze",
-    "difficulty": 7,
-    "name": "2020 February Swapity Swap",
+    "difficulty": 9,
+    "name": "+2020 February Swapity Swap",
     "sub_cat": "bronze3"
   },
   {
@@ -629,10 +629,10 @@
   },
   {
     "sub_cat": "bronze2",
-    "difficulty": 4,
+    "difficulty": 8,
     "site": "usaco",
     "level": "bronze",
-    "name": "2021 January Even More Odd Photos"
+    "name": "+2021 January Even More Odd Photos"
   },
   {
     "level": "gold",
@@ -965,10 +965,10 @@
   },
   {
     "site": "usaco",
-    "difficulty": 1,
+    "difficulty": 6,
     "sub_cat": "bronze1",
     "level": "bronze",
-    "name": "2021 February Year of the Cow"
+    "name": "+2021 February Year of the Cow"
   },
   {
     "site": "usaco",
@@ -1063,8 +1063,8 @@
   },
   {
     "site": "usaco",
-    "name": "2020 January Race",
-    "difficulty": 7,
+    "name": "+2020 January Race",
+    "difficulty": 8,
     "level": "bronze",
     "sub_cat": "bronze3"
   },
@@ -1115,7 +1115,7 @@
     "level": "bronze",
     "sub_cat": "bronze1",
     "site": "usaco",
-    "name": "2018 December Mixing Milk"
+    "name": "+2018 December Mixing Milk"
   },
   {
     "level": "gold",
@@ -1159,7 +1159,7 @@
     "sub_cat": "platinum2"
   },
   {
-    "name": "2020 December Do You Know Your ABCs?",
+    "name": "+2020 December Do You Know Your ABCs?",
     "level": "bronze",
     "site": "usaco",
     "difficulty": 1,
@@ -1209,8 +1209,8 @@
   },
   {
     "level": "bronze",
-    "difficulty": 1,
-    "name": "2020 February Triangles",
+    "difficulty": 2,
+    "name": "+2020 February Triangles",
     "sub_cat": "bronze1",
     "site": "usaco"
   },
@@ -1300,8 +1300,8 @@
   },
   {
     "sub_cat": "bronze3",
-    "difficulty": 7,
-    "name": "2019 December Livestock Lineup",
+    "difficulty": 9,
+    "name": "+2019 December Livestock Lineup",
     "site": "usaco",
     "level": "bronze"
   },
@@ -1436,7 +1436,7 @@
   },
   {
     "level": "bronze",
-    "name": "2019 February Measuring Traffic",
+    "name": "+2019 February Measuring Traffic",
     "site": "usaco",
     "difficulty": 7,
     "sub_cat": "bronze3"
@@ -1543,10 +1543,10 @@
     "name": "2016 February Load Balancing"
   },
   {
-    "name": "2019 February Sleepy Cow Herding",
+    "name": "+2019 February Sleepy Cow Herding",
     "level": "bronze",
     "site": "usaco",
-    "difficulty": 1,
+    "difficulty": 5,
     "sub_cat": "bronze1"
   },
   {
@@ -1646,7 +1646,7 @@
   {
     "level": "bronze",
     "name": "2020 December Stuck in a Rut",
-    "difficulty": 7,
+    "difficulty": 8,
     "site": "usaco",
     "sub_cat": "bronze3"
   },
@@ -1687,9 +1687,9 @@
   },
   {
     "site": "usaco",
-    "name": "2019 January Guess the Animal",
+    "name": "+2019 January Guess the Animal",
     "sub_cat": "bronze3",
-    "difficulty": 7,
+    "difficulty": 9,
     "level": "bronze"
   },
   {
@@ -1859,9 +1859,9 @@
   {
     "level": "bronze",
     "site": "usaco",
-    "difficulty": 7,
+    "difficulty": 8,
     "sub_cat": "bronze3",
-    "name": "2021 January Just Stalling"
+    "name": "+2021 January Just Stalling"
   },
   {
     "name": "2016 January Subsequences Summing to Sevens",
@@ -2010,9 +2010,9 @@
   },
   {
     "site": "usaco",
-    "name": "2021 January Uddered but not Herd",
+    "name": "+2021 January Uddered but not Herd",
     "sub_cat": "bronze1",
-    "difficulty": 1,
+    "difficulty": 3,
     "level": "bronze"
   },
   {
@@ -2169,8 +2169,8 @@
   },
   {
     "sub_cat": "bronze2",
-    "difficulty": 4,
-    "name": "2020 January Photoshoot",
+    "difficulty": 6,
+    "name": "+2020 January Photoshoot",
     "level": "bronze",
     "site": "usaco"
   },
@@ -2180,8 +2180,8 @@
     "link": ""
   },
   {
-    "name": "2021 February Clockwise Fence",
-    "difficulty": 7,
+    "name": "+2021 February Clockwise Fence",
+    "difficulty": 5,
     "site": "usaco",
     "sub_cat": "bronze3",
     "level": "bronze"
@@ -2301,8 +2301,8 @@
     "level": "bronze",
     "sub_cat": "bronze2",
     "site": "usaco",
-    "name": "2020 February Mad Scientists",
-    "difficulty": 4
+    "name": "+2020 February Mad Scientists",
+    "difficulty": 3
   },
   {
     "difficulty": 24,
@@ -2438,8 +2438,8 @@
   },
   {
     "sub_cat": "bronze2",
-    "name": "2018 December The Bucket List",
-    "difficulty": 4,
+    "name": "+2018 December The Bucket List",
+    "difficulty": 8,
     "level": "bronze",
     "site": "usaco"
   },
