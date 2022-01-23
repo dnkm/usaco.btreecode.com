@@ -101,7 +101,7 @@
     "site": "usaco",
     "level": "bronze",
     "sub_cat": "bronze2",
-    "name": "2017 December The Bovine Shuffle",
+    "name": "+2017 December The Bovine Shuffle",
     "difficulty": 4
   },
   {
@@ -191,17 +191,17 @@
   },
   {
     "sub_cat": "bronze1",
-    "difficulty": 1,
+    "difficulty": 5,
     "site": "usaco",
     "level": "bronze",
-    "name": "2018 January Blocked Billboard II"
+    "name": "+2018 January Blocked Billboard II"
   },
   {
     "site": "usaco",
     "sub_cat": "bronze3",
     "level": "bronze",
-    "difficulty": 7,
-    "name": "2018 February Taming the Herd"
+    "difficulty": 5,
+    "name": "+2018 February Taming the Herd"
   },
   {
     "sub_cat": "silver1",
@@ -392,8 +392,8 @@
     "difficulty": 24
   },
   {
-    "name": "2018 February Hoofball",
-    "difficulty": 4,
+    "name": "+2018 February Hoofball",
+    "difficulty": 8,
     "site": "usaco",
     "sub_cat": "bronze2",
     "level": "bronze"
@@ -406,10 +406,10 @@
     "site": "usaco"
   },
   {
-    "name": "2017 January \"Hoof",
+    "name": "+2017 January \"Hoof",
     "sub_cat": "bronze2",
     "site": "usaco",
-    "difficulty": 4,
+    "difficulty": 2,
     "level": "bronze"
   },
   {
@@ -477,9 +477,9 @@
   },
   {
     "sub_cat": "bronze1",
-    "difficulty": 1,
+    "difficulty": 2,
     "site": "usaco",
-    "name": "2016 December Square Pasture",
+    "name": "+2016 December Square Pasture",
     "level": "bronze"
   },
   {
@@ -663,9 +663,9 @@
     "site": "usaco"
   },
   {
-    "difficulty": 7,
+    "difficulty": 8,
     "sub_cat": "bronze3",
-    "name": "2018 January Out of Place",
+    "name": "+2018 January Out of Place",
     "level": "bronze",
     "site": "usaco"
   },
@@ -737,10 +737,10 @@
   },
   {
     "sub_cat": "bronze3",
-    "difficulty": 7,
+    "difficulty": 9,
     "level": "bronze",
     "site": "usaco",
-    "name": "2017 January Cow Tipping"
+    "name": "+2017 January Cow Tipping"
   },
   {
     "level": "bronze",
@@ -1182,8 +1182,8 @@
   {
     "site": "usaco",
     "level": "bronze",
-    "difficulty": 1,
-    "name": "2016 January Promotion Counting",
+    "difficulty": 2,
+    "name": "+2016 January Promotion Counting",
     "sub_cat": "bronze1"
   },
   {
@@ -1307,10 +1307,10 @@
   },
   {
     "sub_cat": "bronze2",
-    "name": "2016 January Angry Cows",
+    "name": "+2016 January Angry Cows",
     "site": "usaco",
     "level": "bronze",
-    "difficulty": 4
+    "difficulty": 8
   },
   {
     "sub_cat": "gold1",
@@ -1323,8 +1323,8 @@
     "site": "usaco",
     "sub_cat": "bronze1",
     "level": "bronze",
-    "difficulty": 1,
-    "name": "2017 February Why Did the Cow Cross the Road"
+    "difficulty": 2,
+    "name": "+2017 February Why Did the Cow Cross the Road"
   },
   {
     "difficulty": 27,
@@ -1367,11 +1367,11 @@
     "difficulty": 14
   },
   {
-    "name": "2017 January Don't Be Last!",
+    "name": "+2017 January Don't Be Last!",
     "level": "bronze",
     "site": "usaco",
     "sub_cat": "bronze1",
-    "difficulty": 1
+    "difficulty": 3
   },
   {
     "site": "SPOJ",
@@ -1464,10 +1464,10 @@
   },
   {
     "sub_cat": "bronze2",
-    "name": "2016 December Block Game",
+    "name": "+2016 December Block Game",
     "site": "usaco",
     "level": "bronze",
-    "difficulty": 4
+    "difficulty": 5
   },
   {
     "name": "2017 December Greedy Gift Takers",
@@ -1532,8 +1532,8 @@
     "site": "usaco",
     "level": "bronze",
     "sub_cat": "bronze3",
-    "name": "2016 December The Cow-Signal",
-    "difficulty": 7
+    "name": "+2016 December The Cow-Signal",
+    "difficulty": 8
   },
   {
     "level": "platinum",
@@ -1590,8 +1590,8 @@
     "level": "silver"
   },
   {
-    "difficulty": 1,
-    "name": "2017 December Blocked Billboard",
+    "difficulty": 4,
+    "name": "+2017 December Blocked Billboard",
     "level": "bronze",
     "site": "usaco",
     "sub_cat": "bronze1"
@@ -1613,9 +1613,9 @@
   {
     "site": "usaco",
     "level": "bronze",
-    "name": "2016 January Mowing the Field",
+    "name": "+2016 January Mowing the Field",
     "sub_cat": "bronze3",
-    "difficulty": 7
+    "difficulty": 5
   },
   {
     "level": "silver",
@@ -1728,9 +1728,9 @@
     "site": "usaco"
   },
   {
-    "difficulty": 7,
+    "difficulty": 5,
     "site": "usaco",
-    "name": "2017 February Why Did the Cow Cross the Road III",
+    "name": "+2017 February Why Did the Cow Cross the Road III",
     "level": "bronze",
     "sub_cat": "bronze3"
   },
@@ -1833,7 +1833,7 @@
   {
     "difficulty": 4,
     "sub_cat": "bronze2",
-    "name": "2018 January Lifeguards",
+    "name": "+2018 January Lifeguards",
     "site": "usaco",
     "level": "bronze"
   },
@@ -1895,7 +1895,7 @@
     "site": "usaco",
     "level": "bronze",
     "difficulty": 7,
-    "name": "2017 December Milk Measurement",
+    "name": "+2017 December Milk Measurement",
     "sub_cat": "bronze3"
   },
   {
@@ -2042,8 +2042,8 @@
     "sub_cat": "gold2"
   },
   {
-    "name": "2017 February Why Did the Cow Cross the Road II",
-    "difficulty": 4,
+    "name": "+2017 February Why Did the Cow Cross the Road II",
+    "difficulty": 6,
     "site": "usaco",
     "level": "bronze",
     "sub_cat": "bronze2"
@@ -2234,8 +2234,8 @@
   {
     "level": "bronze",
     "sub_cat": "bronze3",
-    "name": "2018 December Back and Forth",
-    "difficulty": 7,
+    "name": "+2018 December Back and Forth",
+    "difficulty": 9,
     "site": "usaco"
   },
   {
@@ -2347,8 +2347,8 @@
   {
     "sub_cat": "bronze1",
     "site": "usaco",
-    "name": "2018 February Teleportation",
-    "difficulty": 1,
+    "name": "+2018 February Teleportation",
+    "difficulty": 3,
     "level": "bronze"
   },
   {
