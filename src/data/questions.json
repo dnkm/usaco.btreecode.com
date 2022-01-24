@@ -29,8 +29,8 @@
   },
   {
     "site": "usaco",
-    "name": "2015 January Cow Routing",
-    "difficulty": 1,
+    "name": "+2015 January Cow Routing",
+    "difficulty": 4,
     "sub_cat": "bronze1",
     "level": "bronze"
   },
@@ -162,8 +162,8 @@
     "level": "bronze",
     "site": "usaco",
     "sub_cat": "bronze1",
-    "difficulty": 1,
-    "name": "2015 February Censoring"
+    "difficulty": 3,
+    "name": "+2015 February Censoring"
   },
   {
     "name": "2015 January Stampede",
@@ -497,11 +497,11 @@
     "site": "usaco"
   },
   {
-    "name": "2016 February Load Balancing",
+    "name": "+2016 February Load Balancing",
     "site": "usaco",
     "level": "bronze",
     "sub_cat": "bronze3",
-    "difficulty": 7
+    "difficulty": 8
   },
   {
     "name": "2014 December Piggyback",
@@ -525,10 +525,10 @@
     "level": "silver"
   },
   {
-    "difficulty": 7,
+    "difficulty": 9,
     "sub_cat": "bronze3",
     "level": "bronze",
-    "name": "2015 Open Trapped in the Haybales",
+    "name": "+2015 Open Trapped in the Haybales",
     "site": "usaco"
   },
   {
@@ -731,7 +731,7 @@
   {
     "site": "usaco",
     "difficulty": 7,
-    "name": "2015 February Cow Hopscotch",
+    "name": "+2015 February Cow Hopscotch",
     "sub_cat": "bronze3",
     "level": "bronze"
   },
@@ -891,8 +891,8 @@
   {
     "level": "bronze",
     "site": "usaco",
-    "name": "2014 December Marathon",
-    "difficulty": 1,
+    "name": "+2014 December Marathon",
+    "difficulty": 5,
     "sub_cat": "bronze1"
   },
   {
@@ -913,8 +913,8 @@
     "site": "usaco",
     "level": "bronze",
     "sub_cat": "bronze1",
-    "difficulty": 1,
-    "name": "2016 February Milk Pails"
+    "difficulty": 3,
+    "name": "+2016 February Milk Pails"
   },
   {
     "difficulty": 14,
@@ -936,9 +936,9 @@
     "site": "usaco"
   },
   {
-    "difficulty": 0,
+    "difficulty": 8,
     "sub_cat": "bronze4",
-    "name": "2015 January Meeting Time",
+    "name": "+2015 January Meeting Time",
     "level": "bronze",
     "site": "usaco"
   },
@@ -950,10 +950,10 @@
     "difficulty": 11
   },
   {
-    "name": "2015 January Cow Routing II",
+    "name": "+2015 January Cow Routing II",
     "level": "bronze",
     "site": "usaco",
-    "difficulty": 4,
+    "difficulty": 6,
     "sub_cat": "bronze2"
   },
   {
@@ -1029,9 +1029,9 @@
   {
     "sub_cat": "bronze2",
     "site": "usaco",
-    "difficulty": 4,
+    "difficulty": 7,
     "level": "bronze",
-    "name": "2015 Open Bessie Gets Even"
+    "name": "+2015 Open Bessie Gets Even"
   },
   {
     "level": "platinum",
@@ -1070,10 +1070,10 @@
   },
   {
     "sub_cat": "bronze4",
-    "name": "2014 December Learning by Example",
+    "name": "+2014 December Learning by Example",
     "site": "usaco",
     "level": "bronze",
-    "difficulty": 0
+    "difficulty": 9
   },
   {
     "site": "usaco",
@@ -1202,8 +1202,8 @@
   },
   {
     "site": "usaco",
-    "name": "2014 December Crosswords",
-    "difficulty": 4,
+    "name": "+2014 December Crosswords",
+    "difficulty": 6,
     "sub_cat": "bronze2",
     "level": "bronze"
   },
@@ -1254,7 +1254,7 @@
     "sub_cat": "bronze3",
     "difficulty": 7,
     "site": "usaco",
-    "name": "2014 December Cow Jog"
+    "name": "+2014 December Cow Jog"
   },
   {
     "difficulty": 27,
@@ -1264,9 +1264,9 @@
     "name": "2021 February Count the Cows"
   },
   {
-    "difficulty": 7,
+    "difficulty": 9,
     "level": "bronze",
-    "name": "2015 January It's All About the Base",
+    "name": "+2015 January It's All About the Base",
     "site": "usaco",
     "sub_cat": "bronze3"
   },
@@ -1394,10 +1394,10 @@
   },
   {
     "sub_cat": "bronze2",
-    "difficulty": 4,
+    "difficulty": 5,
     "site": "usaco",
     "level": "bronze",
-    "name": "2015 December Speeding Ticket"
+    "name": "+2015 December Speeding Ticket"
   },
   {
     "name": "2020 December Sleeping Cows",
@@ -1430,7 +1430,7 @@
   {
     "difficulty": 7,
     "level": "bronze",
-    "name": "2015 December Contaminated Milk",
+    "name": "+2015 December Contaminated Milk",
     "site": "usaco",
     "sub_cat": "bronze3"
   },
@@ -1660,7 +1660,7 @@
   {
     "sub_cat": "bronze1",
     "level": "bronze",
-    "name": "2015 December Fence Painting",
+    "name": "+2015 December Fence Painting",
     "site": "usaco",
     "difficulty": 1
   },
@@ -2000,8 +2000,8 @@
     "level": "bronze",
     "sub_cat": "bronze4",
     "site": "usaco",
-    "difficulty": 0,
-    "name": "2015 Open Palindromic Paths"
+    "difficulty": 9,
+    "name": "+2015 Open Palindromic Paths"
   },
   {
     "link": "https://www.spoj.com/problems/STPAR/",
@@ -2056,8 +2056,8 @@
     "sub_cat": "gold3"
   },
   {
-    "difficulty": 1,
-    "name": "2015 Open Moocryption",
+    "difficulty": 5,
+    "name": "+2015 Open Moocryption",
     "site": "usaco",
     "level": "bronze",
     "sub_cat": "bronze1"
@@ -2126,7 +2126,7 @@
     "name": "2018 Open Team Tic Tac Toe"
   },
   {
-    "name": "2016 February Circular Barn",
+    "name": "+2016 February Circular Barn",
     "level": "bronze",
     "site": "usaco",
     "sub_cat": "bronze2",
