@@ -43,10 +43,10 @@
   },
   {
     "level": "bronze",
-    "name": "2016 Open Field Reduction",
+    "name": "+2016 Open Field Reduction",
     "site": "usaco",
     "sub_cat": "bronze3",
-    "difficulty": 7
+    "difficulty": 6
   },
   {
     "level": "bronze",
@@ -58,9 +58,9 @@
   {
     "level": "bronze",
     "sub_cat": "bronze2",
-    "name": "2020 Open Social Distancing II",
+    "name": "+2020 Open Social Distancing II",
     "site": "usaco",
-    "difficulty": 4
+    "difficulty": 7
   },
   {
     "level": "platinum",
@@ -121,7 +121,7 @@
   {
     "site": "usaco",
     "level": "bronze",
-    "difficulty": 7,
+    "difficulty": 8,
     "sub_cat": "bronze3",
     "name": "2021 Open Acowdemia III"
   },
@@ -154,9 +154,9 @@
   {
     "site": "usaco",
     "sub_cat": "bronze1",
-    "name": "2019 Open Bucket Brigade",
+    "name": "+2019 Open Bucket Brigade",
     "level": "bronze",
-    "difficulty": 1
+    "difficulty": 8
   },
   {
     "level": "bronze",
@@ -175,8 +175,8 @@
   {
     "level": "bronze",
     "sub_cat": "bronze1",
-    "difficulty": 1,
-    "name": "2017 Open The Lost Cow",
+    "difficulty": 4,
+    "name": "+2017 Open The Lost Cow",
     "site": "usaco"
   },
   {
@@ -614,7 +614,7 @@
     "site": "usaco"
   },
   {
-    "difficulty": 1,
+    "difficulty": 8,
     "sub_cat": "bronze1",
     "name": "2021 Open Acowdemia I",
     "site": "usaco",
@@ -745,8 +745,8 @@
   {
     "level": "bronze",
     "sub_cat": "bronze3",
-    "difficulty": 7,
-    "name": "2020 Open Cowntact Tracing",
+    "difficulty": 9,
+    "name": "+2020 Open Cowntact Tracing",
     "site": "usaco"
   },
   {
@@ -868,10 +868,10 @@
     "site": "usaco"
   },
   {
-    "name": "2018 Open Milking Order",
+    "name": "+2018 Open Milking Order",
     "level": "bronze",
     "sub_cat": "bronze2",
-    "difficulty": 4,
+    "difficulty": 8,
     "site": "usaco"
   },
   {
@@ -1524,9 +1524,9 @@
   {
     "level": "bronze",
     "site": "usaco",
-    "difficulty": 7,
+    "difficulty": 11,
     "sub_cat": "bronze3",
-    "name": "2019 Open Cow Evolution"
+    "name": "+2019 Open Cow Evolution"
   },
   {
     "site": "usaco",
@@ -1790,10 +1790,10 @@
   },
   {
     "level": "bronze",
-    "difficulty": 7,
+    "difficulty": 10,
     "sub_cat": "bronze3",
     "site": "usaco",
-    "name": "2018 Open Family Tree"
+    "name": "+2018 Open Family Tree"
   },
   {
     "name": "2015 December Switching on the Lights",
@@ -2023,9 +2023,9 @@
   {
     "level": "bronze",
     "site": "usaco",
-    "difficulty": 4,
+    "difficulty": 9,
     "sub_cat": "bronze2",
-    "name": "2021 Open Acowdemia II"
+    "name": "+2021 Open Acowdemia II"
   },
   {
     "name": "2019 January Icy Perimeter",
@@ -2077,8 +2077,8 @@
     "level": "platinum"
   },
   {
-    "name": "2017 Open Bovine Genomics",
-    "difficulty": 4,
+    "name": "+2017 Open Bovine Genomics",
+    "difficulty": 8,
     "sub_cat": "bronze2",
     "site": "usaco",
     "level": "bronze"
@@ -2091,10 +2091,10 @@
     "site": "usaco"
   },
   {
-    "name": "2021 February Comfortable Cows",
+    "name": "+2021 February Comfortable Cows",
     "site": "usaco",
     "level": "bronze",
-    "difficulty": 4,
+    "difficulty": 7,
     "sub_cat": "bronze2"
   },
   {
@@ -2121,9 +2121,9 @@
   {
     "level": "bronze",
     "site": "usaco",
-    "difficulty": 1,
+    "difficulty": 5,
     "sub_cat": "bronze1",
-    "name": "2018 Open Team Tic Tac Toe"
+    "name": "+2018 Open Team Tic Tac Toe"
   },
   {
     "name": "+2016 February Circular Barn",
@@ -2258,9 +2258,9 @@
     "name": "They're Everywhere"
   },
   {
-    "difficulty": 4,
+    "difficulty": 8,
     "level": "bronze",
-    "name": "2019 Open Milk Factory",
+    "name": "+2019 Open Milk Factory",
     "site": "usaco",
     "sub_cat": "bronze2"
   },
@@ -2285,8 +2285,8 @@
   },
   {
     "site": "usaco",
-    "name": "2016 Open Diamond Collector",
-    "difficulty": 1,
+    "name": "+2016 Open Diamond Collector",
+    "difficulty": 3,
     "level": "bronze",
     "sub_cat": "bronze1"
   },
@@ -2331,9 +2331,9 @@
     "sub_cat": "platinum2"
   },
   {
-    "name": "2016 Open Bull in a China shop",
+    "name": "+2016 Open Bull in a China shop",
     "level": "bronze",
-    "difficulty": 4,
+    "difficulty": 8,
     "site": "usaco",
     "sub_cat": "bronze2"
   },
@@ -2465,9 +2465,9 @@
     "sub_cat": "platinum3"
   },
   {
-    "difficulty": 4,
+    "difficulty": 7,
     "level": "bronze",
-    "name": "2019 February The Great Revegetation",
+    "name": "+2019 February The Great Revegetation",
     "sub_cat": "bronze2",
     "site": "usaco"
   },
