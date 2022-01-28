@@ -2,10 +2,10 @@ import { format } from "date-fns";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AppContext from "../util/context";
-import { fstore } from "../util/fire";
+import AppContext from "../../util/context";
+import { fstore } from "../../util/fire";
 
-export default function Admin() {
+export default function AdminUsers() {
   const { user, userData } = useContext(AppContext);
   let navigate = useNavigate();
   let [active, setActive] = useState([]);

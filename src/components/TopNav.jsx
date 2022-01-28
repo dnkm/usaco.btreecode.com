@@ -6,7 +6,7 @@ import { auth } from "../util/fire";
 import Button from "./Button";
 
 const ADMIN_MENUS = [
-  ["Admin Page", "/admin"],
+  ["Users", "/admin/users"],
   ["Home", "/"],
 ];
 

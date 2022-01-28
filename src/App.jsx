@@ -2,11 +2,11 @@ import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Admin from "./pages/Admin";
 import AppContext from "./util/context";
 import { auth, fstore } from "./util/fire";
 import List from "./pages/List/Index";
 import TopNav from "./components/TopNav";
+import AdminUsers from "./pages/admin/users";
 import "./styles.css";
 
 export default function App() {
@@ -56,7 +56,7 @@ export default function App() {
           {user ? (
             <Routes>
               <Route path="/" element={<List />} />
-              <Route path="/admin" element={<Admin />} />
+              <Route path="/admin/users" element={<AdminUsers />} />
             </Routes>
           ) : (
             <div>Please login</div>
