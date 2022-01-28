@@ -4,8 +4,7 @@
     "sub_cat": "silver1",
     "site": "usaco",
     "level": "silver",
-    "name": "+2020 January Berry Picking",
-    "tags": "binary search"
+    "name": "+2020 January Berry Picking"
   },
   {
     "level": "bronze",
@@ -16,10 +15,10 @@
   },
   {
     "site": "usaco",
-    "name": "2016 December Moocast",
+    "name": "+2016 December Moocast",
     "level": "silver",
     "sub_cat": "silver3",
-    "difficulty": 17
+    "difficulty": 11
   },
   {
     "sub_cat": "silver3",
@@ -78,10 +77,10 @@
     "site": "usaco"
   },
   {
-    "name": "2016 February Circular Barn",
+    "name": "+2016 February Circular Barn",
     "level": "silver",
     "sub_cat": "silver1",
-    "difficulty": 11,
+    "difficulty": 13,
     "site": "usaco"
   },
   {
@@ -167,8 +166,8 @@
     "name": "+2015 February Censoring"
   },
   {
-    "name": "2015 January Stampede",
-    "difficulty": 11,
+    "name": "+2015 January Stampede",
+    "difficulty": 13,
     "site": "usaco",
     "sub_cat": "silver1",
     "level": "silver"
@@ -209,8 +208,7 @@
     "level": "silver",
     "name": "+2019 January Grass Planting",
     "difficulty": 11,
-    "site": "usaco",
-    "tags": "dfs,logic"
+    "site": "usaco"
   },
   {
     "name": "Stone Division",
@@ -225,8 +223,8 @@
     "site": "usaco"
   },
   {
-    "difficulty": 11,
-    "name": "2017 February Why Did the Cow Cross the Road",
+    "difficulty": 13,
+    "name": "+2017 February Why Did the Cow Cross the Road",
     "level": "silver",
     "site": "usaco",
     "sub_cat": "silver1"
@@ -251,11 +249,11 @@
     "link": "https://codeforces.com/problemset/problem/1343/C"
   },
   {
-    "name": "2016 February Milk Pails",
+    "name": "+2016 February Milk Pails",
     "site": "usaco",
     "level": "silver",
     "sub_cat": "silver3",
-    "difficulty": 17
+    "difficulty": 16
   },
   {
     "site": "SPOJ",
@@ -264,8 +262,8 @@
   },
   {
     "sub_cat": "silver2",
-    "difficulty": 14,
-    "name": "2018 January Rental Service",
+    "difficulty": 12,
+    "name": "+2018 January Rental Service",
     "site": "usaco",
     "level": "silver"
   },
@@ -292,25 +290,24 @@
   },
   {
     "level": "silver",
-    "name": "2015 January Meeting Time",
+    "name": "+2015 January Meeting Time",
     "site": "usaco",
     "sub_cat": "silver3",
-    "difficulty": 17
+    "difficulty": 16
   },
   {
     "sub_cat": "silver1",
     "level": "silver",
-    "name": "2016 Open Field Reduction",
+    "name": "+2016 Open Field Reduction",
     "site": "usaco",
-    "difficulty": 11
+    "difficulty": 14
   },
   {
     "site": "usaco",
     "name": "+2019 December Milk Visits",
     "level": "silver",
     "difficulty": 15,
-    "sub_cat": "silver3",
-    "tags": "logic,dfs,flood fill"
+    "sub_cat": "silver3"
   },
   {
     "level": "platinum",
@@ -356,11 +353,11 @@
     "sub_cat": "silver2",
     "site": "usaco",
     "level": "silver",
-    "name": "2017 February Why Did the Cow Cross the Road II",
-    "difficulty": 14
+    "name": "+2017 February Why Did the Cow Cross the Road II",
+    "difficulty": 13
   },
   {
-    "name": "2018 February Rest Stops",
+    "name": "+2018 February Rest Stops",
     "difficulty": 11,
     "level": "silver",
     "site": "usaco",
@@ -409,7 +406,7 @@
     "site": "usaco"
   },
   {
-    "name": "+2017 January \"Hoof",
+    "name": "+2017 January Hoof, Paper, Scissors",
     "sub_cat": "bronze2",
     "site": "usaco",
     "difficulty": 2,
@@ -458,12 +455,11 @@
     "sub_cat": "gold1"
   },
   {
-    "difficulty": 19,
+    "difficulty": 17,
     "site": "usaco",
     "name": "+2020 January Loan Repayment",
     "level": "silver",
-    "sub_cat": "silver2",
-    "tags": "pattern"
+    "sub_cat": "silver2"
   },
   {
     "difficulty": 34,
@@ -475,9 +471,9 @@
   {
     "level": "silver",
     "site": "usaco",
-    "name": "2014 December Cow Jog",
+    "name": "+2014 December Cow Jog",
     "sub_cat": "silver3",
-    "difficulty": 17
+    "difficulty": 11
   },
   {
     "sub_cat": "bronze1",
@@ -491,8 +487,7 @@
     "sub_cat": "silver2",
     "difficulty": 16,
     "level": "silver",
-    "site": "usaco",
-    "tags": "2d prefix sum"
+    "site": "usaco"
   },
   {
     "name": "2020 Open Exercise",
@@ -509,8 +504,8 @@
     "difficulty": 8
   },
   {
-    "name": "2014 December Piggyback",
-    "difficulty": 11,
+    "name": "+2014 December Piggyback",
+    "difficulty": 16,
     "level": "silver",
     "site": "usaco",
     "sub_cat": "silver1"
@@ -569,8 +564,7 @@
     "level": "bronze",
     "difficulty": 9,
     "name": "+2020 February Swapity Swap",
-    "sub_cat": "bronze3",
-    "tags": "math,binary exponentiation"
+    "sub_cat": "bronze3"
   },
   {
     "site": "SPOJ",
@@ -588,13 +582,13 @@
     "site": "usaco",
     "level": "silver",
     "sub_cat": "silver3",
-    "difficulty": 17,
-    "name": "2017 January Secret Cow Code"
+    "difficulty": 19,
+    "name": "+2017 January Secret Cow Code"
   },
   {
     "site": "usaco",
-    "difficulty": 14,
-    "name": "2015 January Cow Routing",
+    "difficulty": 16,
+    "name": "+2015 January Cow Routing",
     "sub_cat": "silver2",
     "level": "silver"
   },
@@ -610,11 +604,11 @@
     "sub_cat": "silver3",
     "difficulty": 17,
     "site": "usaco",
-    "name": "2018 January MooTube"
+    "name": "+2018 January MooTube"
   },
   {
-    "name": "2017 December Milk Measurement",
-    "difficulty": 14,
+    "name": "+2017 December Milk Measurement",
+    "difficulty": 11,
     "sub_cat": "silver2",
     "level": "silver",
     "site": "usaco"
@@ -656,16 +650,16 @@
   },
   {
     "sub_cat": "silver2",
-    "name": "2016 February Load Balancing",
+    "name": "+2016 February Load Balancing",
     "level": "silver",
     "site": "usaco",
-    "difficulty": 14
+    "difficulty": 15
   },
   {
     "level": "silver",
     "sub_cat": "silver3",
-    "difficulty": 17,
-    "name": "2015 February Superbull",
+    "difficulty": 19,
+    "name": "+2015 February Superbull",
     "site": "usaco"
   },
   {
@@ -685,7 +679,7 @@
   {
     "site": "usaco",
     "difficulty": 11,
-    "name": "2016 December Counting Haybales",
+    "name": "+2016 December Counting Haybales",
     "sub_cat": "silver1",
     "level": "silver"
   },
@@ -721,15 +715,15 @@
     "name": "ADASEA"
   },
   {
-    "name": "2018 January Lifeguards",
+    "name": "+2018 January Lifeguards",
     "site": "usaco",
     "level": "silver",
     "sub_cat": "silver1",
     "difficulty": 11
   },
   {
-    "name": "2015 February Censoring",
-    "difficulty": 11,
+    "name": "+2015 February Censoring",
+    "difficulty": 16,
     "level": "silver",
     "site": "usaco",
     "sub_cat": "silver1"
@@ -781,7 +775,7 @@
     "level": "silver",
     "site": "usaco",
     "difficulty": 14,
-    "name": "2017 January \"Hoof"
+    "name": "+2017 January Hoof, Paper, Scissors"
   },
   {
     "difficulty": 31,
@@ -867,9 +861,9 @@
     "site": "usaco"
   },
   {
-    "difficulty": 14,
+    "difficulty": 11,
     "level": "silver",
-    "name": "2015 December High Card Winds",
+    "name": "+2015 December High Card Winds",
     "sub_cat": "silver2",
     "site": "usaco"
   },
@@ -910,10 +904,10 @@
   },
   {
     "level": "silver",
-    "name": "2017 January Cow Dance Show",
+    "name": "+2017 January Cow Dance Show",
     "sub_cat": "silver1",
     "site": "usaco",
-    "difficulty": 11
+    "difficulty": 13
   },
   {
     "site": "usaco",
@@ -953,8 +947,7 @@
     "site": "usaco",
     "name": "+2018 December Convention",
     "sub_cat": "silver1",
-    "difficulty": 13,
-    "tags": "binary search,greedy"
+    "difficulty": 13
   },
   {
     "name": "+2015 January Cow Routing II",
@@ -986,9 +979,9 @@
   },
   {
     "level": "silver",
-    "difficulty": 14,
+    "difficulty": 15,
     "sub_cat": "silver2",
-    "name": "2018 February Snow Boots",
+    "name": "+2018 February Snow Boots",
     "site": "usaco"
   },
   {
@@ -999,17 +992,17 @@
     "level": "platinum"
   },
   {
-    "difficulty": 17,
-    "name": "2015 December Breed Counting",
+    "difficulty": 12,
+    "name": "+2015 December Breed Counting",
     "site": "usaco",
     "level": "silver",
     "sub_cat": "silver3"
   },
   {
-    "name": "2018 December Mooyo Mooyo",
+    "name": "+2018 December Mooyo Mooyo",
     "site": "usaco",
     "level": "silver",
-    "difficulty": 17,
+    "difficulty": 11,
     "sub_cat": "silver3"
   },
   {
@@ -1084,10 +1077,10 @@
   },
   {
     "site": "usaco",
-    "name": "2016 Open Closing the Farm",
+    "name": "+2016 Open Closing the Farm",
     "sub_cat": "silver3",
     "level": "silver",
-    "difficulty": 17
+    "difficulty": 18
   },
   {
     "name": "2018 December Balance Beam",
@@ -1278,11 +1271,11 @@
     "sub_cat": "bronze3"
   },
   {
-    "name": "2016 December Cities and States",
+    "name": "+2016 December Cities and States",
     "site": "usaco",
     "sub_cat": "silver2",
     "level": "silver",
-    "difficulty": 14
+    "difficulty": 11
   },
   {
     "name": "+2017 Open Modern Art",
@@ -1369,10 +1362,9 @@
   {
     "site": "usaco",
     "name": "+2020 February Triangles",
-    "tags": "prefix sum",
     "level": "silver",
     "sub_cat": "silver2",
-    "difficulty": 18
+    "difficulty": 17
   },
   {
     "name": "+2017 January Don't Be Last!",
@@ -1419,8 +1411,7 @@
     "difficulty": 14,
     "name": "+2019 January Mountain View",
     "sub_cat": "silver3",
-    "level": "silver",
-    "tags": "pattern"
+    "level": "silver"
   },
   {
     "site": "usaco",
@@ -1513,13 +1504,13 @@
   },
   {
     "level": "silver",
-    "name": "2017 December The Bovine Shuffle",
+    "name": "+2017 December The Bovine Shuffle",
     "site": "usaco",
     "sub_cat": "silver3",
-    "difficulty": 17
+    "difficulty": 13
   },
   {
-    "name": "2017 January \"Hoof",
+    "name": "2017 January Hoof, Paper, Scissors",
     "site": "usaco",
     "level": "gold",
     "difficulty": 24,
@@ -1610,16 +1601,14 @@
     "sub_cat": "silver1",
     "site": "usaco",
     "name": "+2019 February Sleepy Cow Herding",
-    "level": "silver",
-    "tags": "logic"
+    "level": "silver"
   },
   {
     "level": "silver",
     "sub_cat": "silver3",
     "difficulty": 13,
     "name": "+2019 February The Great Revegetation",
-    "site": "usaco",
-    "tags": "dfs,logic"
+    "site": "usaco"
   },
   {
     "site": "usaco",
@@ -1630,10 +1619,10 @@
   },
   {
     "level": "silver",
-    "name": "2016 Open Diamond Collector",
+    "name": "+2016 Open Diamond Collector",
     "site": "usaco",
     "sub_cat": "silver2",
-    "difficulty": 14
+    "difficulty": 13
   },
   {
     "name": "MICEMAZE",
@@ -1651,7 +1640,7 @@
     "site": "usaco",
     "sub_cat": "silver2",
     "level": "silver",
-    "name": "2015 February Cow Hopscotch",
+    "name": "+2015 February Cow Hopscotch",
     "difficulty": 14
   },
   {
@@ -1715,8 +1704,7 @@
     "level": "silver",
     "name": "+2018 December Convention II",
     "sub_cat": "silver2",
-    "difficulty": 12,
-    "tags": "priority queue,greedy"
+    "difficulty": 12
   },
   {
     "site": "usaco",
@@ -1753,10 +1741,10 @@
   },
   {
     "site": "usaco",
-    "name": "2017 February Why Did the Cow Cross the Road III",
+    "name": "+2017 February Why Did the Cow Cross the Road III",
     "level": "silver",
     "sub_cat": "silver3",
-    "difficulty": 17
+    "difficulty": 14
   },
   {
     "site": "usaco",
@@ -1808,11 +1796,11 @@
     "name": "+2018 Open Family Tree"
   },
   {
-    "name": "2015 December Switching on the Lights",
+    "name": "+2015 December Switching on the Lights",
     "site": "usaco",
     "sub_cat": "silver1",
     "level": "silver",
-    "difficulty": 11
+    "difficulty": 13
   },
   {
     "name": "2020 February Delegation",
@@ -1894,8 +1882,7 @@
     "difficulty": 16,
     "level": "silver",
     "site": "usaco",
-    "sub_cat": "silver2",
-    "tags": "prefix sum"
+    "sub_cat": "silver2"
   },
   {
     "site": "usaco",
@@ -1965,8 +1952,7 @@
     "site": "usaco",
     "name": "+2020 February Clock Tree",
     "difficulty": 11,
-    "sub_cat": "silver3",
-    "tags": "dfs"
+    "sub_cat": "silver3"
   },
   {
     "difficulty": 13,
@@ -2046,8 +2032,7 @@
     "level": "silver",
     "site": "usaco",
     "difficulty": 12,
-    "sub_cat": "silver2",
-    "tags": "2d,iterative dfs,flood fill"
+    "sub_cat": "silver2"
   },
   {
     "difficulty": 24,
@@ -2265,8 +2250,7 @@
     "sub_cat": "silver3",
     "name": "+2020 January Wormhole Sort",
     "site": "usaco",
-    "level": "silver",
-    "tags": "binary search,dfs,dsu"
+    "level": "silver"
   },
   {
     "site": "code forces",
@@ -2396,10 +2380,10 @@
     "level": "platinum"
   },
   {
-    "name": "2018 February Teleportation",
+    "name": "+2018 February Teleportation",
     "site": "usaco",
     "level": "silver",
-    "difficulty": 17,
+    "difficulty": 19,
     "sub_cat": "silver3"
   },
   {
@@ -2441,7 +2425,7 @@
     "sub_cat": "gold1"
   },
   {
-    "name": "2017 December My Cow Ate My Homework",
+    "name": "+2017 December My Cow Ate My Homework",
     "difficulty": 11,
     "sub_cat": "silver1",
     "site": "usaco",
@@ -2469,7 +2453,7 @@
   {
     "difficulty": 14,
     "level": "silver",
-    "name": "2014 December Marathon",
+    "name": "+2014 December Marathon",
     "sub_cat": "silver2",
     "site": "usaco"
   },
@@ -2493,24 +2477,24 @@
     "site": "Hackerrank"
   },
   {
+    "difficulty": 14,
     "level": "silver",
-    "sub_cat": "silver1",
     "name": "+2021 December Closest Cow Wins",
-    "difficul": 14,
+    "sub_cat": "silver1",
     "site": "usaco"
   },
   {
+    "difficulty": 11,
     "level": "silver",
-    "sub_cat": "silver2",
     "name": "+2021 December Connecting Two Barns",
-    "difficul": 11,
+    "sub_cat": "silver2",
     "site": "usaco"
   },
   {
+    "difficulty": 18,
     "level": "silver",
-    "sub_cat": "silver2",
     "name": "+2021 December Convoluted Intervals",
-    "difficul": 18,
+    "sub_cat": "silver3",
     "site": "usaco"
   }
 ]
