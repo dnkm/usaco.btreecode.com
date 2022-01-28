@@ -7,6 +7,10 @@ export default function CompletedTable({
   qId,
   Tr,
 }) {
+  let sorted = [...submissions];
+  sorted.sort((a, b) => {
+    return b.date - a.date;
+  });
   return (
     <table border="1" className="table-1">
       <thead>
@@ -27,7 +31,7 @@ export default function CompletedTable({
         </tr>
       </thead>
       <tbody>
-        {submissions
+        {sorted
           .filter((s) => s.date)
           .map((sub) => questions[sub.qid])
           .map((q) => (

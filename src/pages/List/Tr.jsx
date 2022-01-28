@@ -64,6 +64,7 @@ export default function Tr({
                     <Button
                       onClick={() => {
                         setDisable(true);
+                        setShowDate(false);
                       }}
                       disable={disable}
                     >
@@ -72,7 +73,13 @@ export default function Tr({
                   </form>
                 </div>
               )}
-              <Button onClick={() => setShowDate(!showDate)}>Assign</Button>
+              <Button
+                onClick={() => {
+                  setShowDate(!showDate);
+                }}
+              >
+                Assign
+              </Button>
             </td>
           )}
         </>
